@@ -112,12 +112,12 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className={`group relative bg-[#0D1020] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-[#34D399]/20 hover:border-[#34D399]/40 overflow-hidden ${
+                className={`group relative bg-[#0D1020] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-[#0BA14E]/20 hover:border-[#0BA14E]/40 overflow-hidden ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
                 } ${
-                  isOpen ? 'border-[#34D399]/50' : ''
+                  isOpen ? 'border-[#0BA14E]/50' : ''
                 }`}
                 style={{
                   transitionDelay: `${400 + index * 80}ms`,
@@ -127,7 +127,7 @@ export default function FAQSection() {
                 <button
                   onClick={() => toggleFAQ(index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
-                  className="w-full text-left p-6 md:p-8 flex items-center justify-between hover:bg-[#020617]/50 focus-visible:bg-[#020617]/50 focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-lg transition-colors duration-200 relative z-10"
+                  className="w-full text-left p-6 md:p-8 flex items-center justify-between hover:bg-[#020617]/50 focus-visible:bg-[#020617]/50 focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-lg transition-colors duration-200 relative z-10"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
@@ -136,7 +136,7 @@ export default function FAQSection() {
                     {faq.question}
                   </span>
                   <div
-                    className={`flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-[#34D399] to-[#10b981] flex items-center justify-center transition-all duration-300 ${
+                    className={`flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-[#0BA14E] to-[#10b981] flex items-center justify-center transition-all duration-300 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                     aria-hidden="true"
@@ -156,7 +156,7 @@ export default function FAQSection() {
                   <div className="overflow-hidden">
                     <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0 relative z-10">
                       <div className="flex items-start gap-3">
-                        <CheckCircle2 className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5" strokeWidth={2.5} aria-hidden="true" />
+                        <CheckCircle2 className="w-6 h-6 text-[#0BA14E] flex-shrink-0 mt-0.5" strokeWidth={2.5} aria-hidden="true" />
                         <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                           {faq.answer}
                         </p>
@@ -166,7 +166,7 @@ export default function FAQSection() {
                 </div>
 
                 {isOpen && (
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#34D399] via-[#34D399] to-[#34D399] transition-opacity duration-500 rounded-b-3xl"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0BA14E] via-[#0BA14E] to-[#0BA14E] transition-opacity duration-500 rounded-b-3xl"></div>
                 )}
               </div>
             );
@@ -175,7 +175,7 @@ export default function FAQSection() {
 
         {/* CTA */}
         <div
-          className={`relative py-12 md:py-16 px-6 md:px-8 overflow-hidden bg-gradient-to-br from-[#34D399] via-[#10b981] to-[#34D399] rounded-3xl text-white text-center shadow-2xl transition-all duration-1000 ease-out ${
+          className={`relative py-12 md:py-16 px-6 md:px-8 overflow-hidden bg-gradient-to-br from-[#0BA14E] via-[#10b981] to-[#0BA14E] rounded-3xl text-white text-center shadow-2xl transition-all duration-1000 ease-out ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-8'

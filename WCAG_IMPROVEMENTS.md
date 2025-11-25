@@ -13,7 +13,7 @@ This document summarizes all accessibility improvements made to the moviQ websit
 - **File**: `app/globals.css`
 - **Changes**:
   - Added visible focus indicators using `focus-visible` pseudo-class
-  - Green outline (`#34D399`) with 2px width and offset for dark theme
+  - Green outline (`#0BA14E`) with 2px width and offset for dark theme
   - Removed default outline only when not using focus-visible
 - **Impact**: All interactive elements now have clearly visible focus states on dark background
 
@@ -143,7 +143,7 @@ This document summarizes all accessibility improvements made to the moviQ websit
 ## 📝 Notes
 
 - All changes maintain the existing visual design
-- Focus states use the brand color (#34D399) for consistency
+- Focus states use the brand color (#0BA14E) for consistency
 - Error messages are associated with form fields for screen reader support
 - Decorative content is properly hidden from assistive technologies
 - Video backgrounds are marked as decorative (muted, no sound, aria-hidden)

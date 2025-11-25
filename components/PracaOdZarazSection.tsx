@@ -270,7 +270,7 @@ export default function PracaOdZarazSection() {
             
             {/* Animated progress line - full width */}
             <div
-              className="absolute top-0 left-0 h-1 bg-gradient-to-r from-[#34D399] via-[#34D399] to-[#34D399] transition-all duration-1000 ease-out shadow-lg"
+              className="absolute top-0 left-0 h-1 bg-gradient-to-r from-[#0BA14E] via-[#0BA14E] to-[#0BA14E] transition-all duration-1000 ease-out shadow-lg"
               style={{
                 width: `${progress}%`,
                 boxShadow: '0 0 10px rgba(52, 211, 153, 0.5)',
@@ -286,11 +286,11 @@ export default function PracaOdZarazSection() {
               }}
             >
               <div className="relative">
-                <div className="bg-gradient-to-br from-[#34D399] to-[#10b981] rounded-xl p-3 shadow-2xl border-4 border-[#0D1020]">
+                <div className="bg-gradient-to-br from-[#0BA14E] to-[#10b981] rounded-xl p-3 shadow-2xl border-4 border-[#0D1020]">
                   <Car className="w-8 h-8 text-white" strokeWidth={2.5} fill="currentColor" />
                 </div>
-                <div className="absolute inset-0 bg-[#34D399]/30 rounded-xl blur-lg -z-10 animate-pulse"></div>
-                <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#34D399]/30 rounded-full blur-md"></div>
+                <div className="absolute inset-0 bg-[#0BA14E]/30 rounded-xl blur-lg -z-10 animate-pulse"></div>
+                <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#0BA14E]/30 rounded-full blur-md"></div>
               </div>
             </div>
 
@@ -316,15 +316,15 @@ export default function PracaOdZarazSection() {
                       <div
                         className={`absolute inset-0 rounded-full transition-all duration-1000 ${
                           isVisible && progress >= (index + 1) * 25
-                            ? 'bg-[#34D399]/30 scale-150 animate-pulse'
+                            ? 'bg-[#0BA14E]/30 scale-150 animate-pulse'
                             : 'bg-transparent'
                         }`}
                       ></div>
                       
                       <div
-                        className={`relative w-12 h-12 bg-[#34D399] rounded-full border-4 border-[#0D1020] shadow-xl flex items-center justify-center transition-all duration-1000 ${
+                        className={`relative w-12 h-12 bg-[#0BA14E] rounded-full border-4 border-[#0D1020] shadow-xl flex items-center justify-center transition-all duration-1000 ${
                           isVisible && progress >= (index + 1) * 25
-                            ? 'ring-4 ring-[#34D399]/50'
+                            ? 'ring-4 ring-[#0BA14E]/50'
                             : ''
                         }`}
                         style={{
@@ -351,7 +351,7 @@ export default function PracaOdZarazSection() {
               <div className="absolute left-6 top-0 bottom-0 w-1 bg-gray-800 rounded-full"></div>
               
               <div
-                className="absolute left-6 top-0 w-1 bg-gradient-to-b from-[#34D399] via-[#34D399] to-[#34D399] rounded-full transition-all duration-1000 ease-out shadow-lg"
+                className="absolute left-6 top-0 w-1 bg-gradient-to-b from-[#0BA14E] via-[#0BA14E] to-[#0BA14E] rounded-full transition-all duration-1000 ease-out shadow-lg"
                 style={{
                   height: `${progress}%`,
                   boxShadow: '0 0 10px rgba(52, 211, 153, 0.5)',
@@ -393,15 +393,15 @@ export default function PracaOdZarazSection() {
                         <div
                           className={`absolute inset-0 rounded-full transition-all duration-1000 ${
                             isVisible && progress >= (index + 1) * 25
-                              ? 'bg-[#34D399]/30 scale-150 animate-pulse'
+                              ? 'bg-[#0BA14E]/30 scale-150 animate-pulse'
                               : 'bg-transparent'
                           }`}
                         ></div>
                         
                         <div
-                          className={`relative w-12 h-12 bg-[#34D399] rounded-full border-4 border-[#0D1020] shadow-xl flex items-center justify-center transition-all duration-1000 ${
+                          className={`relative w-12 h-12 bg-[#0BA14E] rounded-full border-4 border-[#0D1020] shadow-xl flex items-center justify-center transition-all duration-1000 ${
                             isVisible && progress >= (index + 1) * 25
-                              ? 'ring-4 ring-[#34D399]/50'
+                              ? 'ring-4 ring-[#0BA14E]/50'
                               : ''
                           }`}
                           style={{
@@ -420,8 +420,8 @@ export default function PracaOdZarazSection() {
                     {/* Card - z podświetlaniem dla każdego stepa i wideo dla ostatniego */}
                     <div className={`group relative rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-1000 border-2 overflow-hidden p-8 md:p-10 h-full ${
                       isHighlighted
-                        ? 'border-[#34D399] shadow-2xl shadow-[#34D399]/30 scale-105'
-                        : 'border-[#34D399]/20 hover:border-[#34D399]/40 hover:-translate-y-3'
+                        ? 'border-[#0BA14E] shadow-2xl shadow-[#0BA14E]/30 scale-105'
+                        : 'border-[#0BA14E]/20 hover:border-[#0BA14E]/40 hover:-translate-y-3'
                     } ${isLastStep ? '' : 'bg-[#0D1020]'}`}
                     style={{
                       boxShadow: isHighlighted 
@@ -460,13 +460,13 @@ export default function PracaOdZarazSection() {
                       )}
                       
                       {!isLastStep && isHighlighted && (
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#34D399]/10 to-transparent rounded-3xl animate-pulse"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#0BA14E]/10 to-transparent rounded-3xl animate-pulse"></div>
                       )}
                       
                       {/* Icon and Day */}
                       <div className="hidden md:flex items-center gap-4 mb-6 relative z-10">
-                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#34D399]/10 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-[#34D399]/20">
-                          <IconComponent className="w-6 h-6 text-[#34D399]" strokeWidth={2.5} />
+                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0BA14E]/10 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-[#0BA14E]/20">
+                          <IconComponent className="w-6 h-6 text-[#0BA14E]" strokeWidth={2.5} />
                         </div>
                         <span className="text-sm md:text-base font-semibold text-gray-400 uppercase tracking-wide">
                           {step.day}
@@ -475,8 +475,8 @@ export default function PracaOdZarazSection() {
 
                       {/* Mobile: Icon and Day */}
                       <div className="md:hidden flex items-center gap-4 mb-6 relative z-10">
-                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#34D399]/10 shadow-md border border-[#34D399]/20">
-                          <IconComponent className="w-6 h-6 text-[#34D399]" strokeWidth={2.5} />
+                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0BA14E]/10 shadow-md border border-[#0BA14E]/20">
+                          <IconComponent className="w-6 h-6 text-[#0BA14E]" strokeWidth={2.5} />
                         </div>
                         <span className="text-sm font-semibold text-gray-400 uppercase tracking-wide">
                           {step.day}
@@ -484,7 +484,7 @@ export default function PracaOdZarazSection() {
                       </div>
 
                       {/* Content */}
-                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-white leading-tight group-hover:text-[#34D399] transition-colors duration-300 relative z-10">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-white leading-tight group-hover:text-[#0BA14E] transition-colors duration-300 relative z-10">
                         {step.title}
                       </h3>
                       <p className="text-sm md:text-base text-gray-400 leading-relaxed relative z-10 mb-6">
@@ -544,7 +544,7 @@ export default function PracaOdZarazSection() {
                       )}
 
                       {/* Bottom accent line */}
-                      <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#34D399]/30 via-[#34D399] to-[#34D399]/30 ${isHighlighted ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-500 rounded-b-3xl z-10`}></div>
+                      <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0BA14E]/30 via-[#0BA14E] to-[#0BA14E]/30 ${isHighlighted ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-500 rounded-b-3xl z-10`}></div>
                     </div>
                   </div>
                 );
@@ -575,7 +575,7 @@ export default function PracaOdZarazSection() {
               return (
                 <div
                   key={index}
-                  className={`group relative bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-[#34D399]/20 hover:border-[#34D399]/40 hover:-translate-y-3 overflow-hidden ${
+                  className={`group relative bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-[#0BA14E]/20 hover:border-[#0BA14E]/40 hover:-translate-y-3 overflow-hidden ${
                     isVisible
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-8'
@@ -587,12 +587,12 @@ export default function PracaOdZarazSection() {
                 >
                   <div className="flex items-start gap-6 relative z-10">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                        <IconComponent className="w-8 h-8 text-[#34D399]" strokeWidth={2.5} />
+                      <div className="w-16 h-16 rounded-xl bg-[#0BA14E]/10 flex items-center justify-center border-2 border-[#0BA14E]/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        <IconComponent className="w-8 h-8 text-[#0BA14E]" strokeWidth={2.5} />
                       </div>
                     </div>
                     <div className="flex-1 pt-1">
-                      <h4 className="text-xl md:text-2xl font-bold mb-4 text-white leading-tight group-hover:text-[#34D399] transition-colors duration-300">
+                      <h4 className="text-xl md:text-2xl font-bold mb-4 text-white leading-tight group-hover:text-[#0BA14E] transition-colors duration-300">
                         {group.title}
                       </h4>
                       <p className="text-sm md:text-base text-gray-400 leading-relaxed font-medium">
@@ -600,7 +600,7 @@ export default function PracaOdZarazSection() {
                       </p>
                     </div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#34D399]/30 via-[#34D399] to-[#34D399]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0BA14E]/30 via-[#0BA14E] to-[#0BA14E]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl"></div>
                 </div>
               );
             })}
@@ -637,7 +637,7 @@ export default function PracaOdZarazSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
             {/* Basic Requirements */}
             <div 
-              className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 transition-all duration-1000 ease-out ${
+              className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#0BA14E]/20 transition-all duration-1000 ease-out ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-8'
@@ -648,8 +648,8 @@ export default function PracaOdZarazSection() {
               }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 rounded-2xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20">
-                  <Car className="w-7 h-7 text-[#34D399]" strokeWidth={2.5} />
+                <div className="w-14 h-14 rounded-2xl bg-[#0BA14E]/10 flex items-center justify-center border-2 border-[#0BA14E]/20">
+                  <Car className="w-7 h-7 text-[#0BA14E]" strokeWidth={2.5} />
                 </div>
                 <h4 className="text-xl md:text-2xl font-bold text-white">
                   Podstawowe wymagania
@@ -670,8 +670,8 @@ export default function PracaOdZarazSection() {
                         transitionDelay: `${1400 + index * 100}ms`,
                       }}
                     >
-                      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#34D399]/10 flex items-center justify-center mt-0.5 border border-[#34D399]/20">
-                        <IconComponent className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#0BA14E]/10 flex items-center justify-center mt-0.5 border border-[#0BA14E]/20">
+                        <IconComponent className="w-5 h-5 text-[#0BA14E]" strokeWidth={2.5} />
                       </div>
                       <span className="text-sm md:text-base text-gray-300 leading-relaxed font-medium pt-1">
                         {req.text}
@@ -684,7 +684,7 @@ export default function PracaOdZarazSection() {
 
             {/* Documents */}
             <div 
-              className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 transition-all duration-1000 ease-out ${
+              className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#0BA14E]/20 transition-all duration-1000 ease-out ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-8'
@@ -695,8 +695,8 @@ export default function PracaOdZarazSection() {
               }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 rounded-2xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20">
-                  <FileCheck className="w-7 h-7 text-[#34D399]" strokeWidth={2.5} />
+                <div className="w-14 h-14 rounded-2xl bg-[#0BA14E]/10 flex items-center justify-center border-2 border-[#0BA14E]/20">
+                  <FileCheck className="w-7 h-7 text-[#0BA14E]" strokeWidth={2.5} />
                 </div>
                 <h4 className="text-xl md:text-2xl font-bold text-white">
                   Dokumenty i badania, które w całości dla Ciebie organizujemy
@@ -717,8 +717,8 @@ export default function PracaOdZarazSection() {
                         transitionDelay: `${1500 + index * 100}ms`,
                       }}
                     >
-                      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#34D399]/10 flex items-center justify-center mt-0.5 border border-[#34D399]/20">
-                        <IconComponent className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#0BA14E]/10 flex items-center justify-center mt-0.5 border border-[#0BA14E]/20">
+                        <IconComponent className="w-5 h-5 text-[#0BA14E]" strokeWidth={2.5} />
                       </div>
                       <span className="text-sm md:text-base text-gray-300 leading-relaxed font-medium pt-1">
                         {doc.text}
@@ -758,7 +758,7 @@ export default function PracaOdZarazSection() {
         >
           <button
             onClick={() => scrollToSection('aplikuj')}
-            className="group bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 transition-all duration-300 transform hover:scale-105 active:scale-100 flex items-center justify-center gap-2 mx-auto"
+            className="group bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-105 active:scale-100 flex items-center justify-center gap-2 mx-auto"
             style={{
               boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
             }}

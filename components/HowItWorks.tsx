@@ -210,7 +210,7 @@ export default function HowItWorks() {
         
         {/* Animated progress line - full width */}
         <div
-          className="absolute top-0 left-0 h-1 bg-gradient-to-r from-[#34D399] via-[#34D399] to-[#34D399] transition-all duration-1000 ease-out shadow-lg"
+          className="absolute top-0 left-0 h-1 bg-gradient-to-r from-[#0BA14E] via-[#0BA14E] to-[#0BA14E] transition-all duration-1000 ease-out shadow-lg"
           style={{
             width: `${progress}%`,
             boxShadow: '0 0 10px rgba(52, 211, 153, 0.5)',
@@ -226,11 +226,11 @@ export default function HowItWorks() {
           }}
         >
           <div className="relative">
-            <div className="bg-gradient-to-br from-[#34D399] to-[#10b981] rounded-xl p-3 shadow-2xl border-4 border-[#0D1020]">
+            <div className="bg-gradient-to-br from-[#0BA14E] to-[#10b981] rounded-xl p-3 shadow-2xl border-4 border-[#0D1020]">
               <Car className="w-8 h-8 text-white" strokeWidth={2.5} fill="currentColor" />
             </div>
-            <div className="absolute inset-0 bg-[#34D399]/30 rounded-xl blur-lg -z-10 animate-pulse"></div>
-            <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#34D399]/30 rounded-full blur-md"></div>
+            <div className="absolute inset-0 bg-[#0BA14E]/30 rounded-xl blur-lg -z-10 animate-pulse"></div>
+            <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#0BA14E]/30 rounded-full blur-md"></div>
           </div>
         </div>
 
@@ -256,15 +256,15 @@ export default function HowItWorks() {
                   <div
                     className={`absolute inset-0 rounded-full transition-all duration-1000 ${
                       isVisible && progress >= (index + 1) * 25
-                        ? 'bg-[#34D399]/30 scale-150 animate-pulse'
+                        ? 'bg-[#0BA14E]/30 scale-150 animate-pulse'
                         : 'bg-transparent'
                     }`}
                   ></div>
                   
                   <div
-                    className={`relative w-12 h-12 bg-[#34D399] rounded-full border-4 border-[#0D1020] shadow-xl flex items-center justify-center transition-all duration-1000 ${
+                    className={`relative w-12 h-12 bg-[#0BA14E] rounded-full border-4 border-[#0D1020] shadow-xl flex items-center justify-center transition-all duration-1000 ${
                       isVisible && progress >= (index + 1) * 25
-                        ? 'ring-4 ring-[#34D399]/50'
+                        ? 'ring-4 ring-[#0BA14E]/50'
                         : ''
                     }`}
                     style={{
@@ -292,7 +292,7 @@ export default function HowItWorks() {
             <div className="absolute left-6 top-0 bottom-0 w-1 bg-gray-800 rounded-full"></div>
             
             <div
-              className="absolute left-6 top-0 w-1 bg-gradient-to-b from-[#34D399] via-[#34D399] to-[#34D399] rounded-full transition-all duration-1000 ease-out shadow-lg"
+              className="absolute left-6 top-0 w-1 bg-gradient-to-b from-[#0BA14E] via-[#0BA14E] to-[#0BA14E] rounded-full transition-all duration-1000 ease-out shadow-lg"
               style={{
                 height: `${progress}%`,
                 boxShadow: '0 0 10px rgba(52, 211, 153, 0.5)',
@@ -334,15 +334,15 @@ export default function HowItWorks() {
                       <div
                         className={`absolute inset-0 rounded-full transition-all duration-1000 ${
                           isVisible && progress >= (index + 1) * 25
-                            ? 'bg-[#34D399]/30 scale-150 animate-pulse'
+                            ? 'bg-[#0BA14E]/30 scale-150 animate-pulse'
                             : 'bg-transparent'
                         }`}
                       ></div>
                       
                       <div
-                        className={`relative w-12 h-12 bg-[#34D399] rounded-full border-4 border-[#0D1020] shadow-xl flex items-center justify-center transition-all duration-1000 ${
+                        className={`relative w-12 h-12 bg-[#0BA14E] rounded-full border-4 border-[#0D1020] shadow-xl flex items-center justify-center transition-all duration-1000 ${
                           isVisible && progress >= (index + 1) * 25
-                            ? 'ring-4 ring-[#34D399]/50'
+                            ? 'ring-4 ring-[#0BA14E]/50'
                             : ''
                         }`}
                         style={{
@@ -361,8 +361,8 @@ export default function HowItWorks() {
                   {/* Card - Dark Theme */}
                   <div className={`group relative bg-[#0D1020] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-1000 border-2 overflow-hidden p-8 md:p-10 h-full ${
                     isHighlighted
-                      ? 'border-[#34D399] shadow-2xl shadow-[#34D399]/30 scale-105'
-                      : 'border-[#34D399]/20 hover:border-[#34D399]/40 hover:-translate-y-3'
+                      ? 'border-[#0BA14E] shadow-2xl shadow-[#0BA14E]/30 scale-105'
+                      : 'border-[#0BA14E]/20 hover:border-[#0BA14E]/40 hover:-translate-y-3'
                   }`}
                   style={{
                     boxShadow: isHighlighted 
@@ -370,22 +370,22 @@ export default function HowItWorks() {
                       : '0 10px 40px rgba(0, 0, 0, 0.3), 0 4px 15px rgba(0, 0, 0, 0.2)',
                   }}>
                     {isHighlighted && (
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#34D399]/10 to-transparent rounded-3xl animate-pulse"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#0BA14E]/10 to-transparent rounded-3xl animate-pulse"></div>
                     )}
                     
                     {isHighlighted && (
                       <div className="absolute bottom-4 right-4 z-20">
-                        <div className="bg-gradient-to-br from-[#34D399] to-[#10b981] rounded-full p-3 shadow-xl border-2 border-[#0D1020]/50 animate-bounce">
+                        <div className="bg-gradient-to-br from-[#0BA14E] to-[#10b981] rounded-full p-3 shadow-xl border-2 border-[#0D1020]/50 animate-bounce">
                           <ArrowDown className="w-5 h-5 text-white" strokeWidth={2.5} />
                         </div>
-                        <div className="absolute inset-0 bg-[#34D399]/30 rounded-full blur-md -z-10 animate-pulse"></div>
+                        <div className="absolute inset-0 bg-[#0BA14E]/30 rounded-full blur-md -z-10 animate-pulse"></div>
                       </div>
                     )}
                     
                     {/* Icon and Day */}
                     <div className="hidden md:flex items-center gap-4 mb-6">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#34D399]/10 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-[#34D399]/20">
-                        <IconComponent className="w-6 h-6 text-[#34D399]" strokeWidth={2.5} />
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0BA14E]/10 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-[#0BA14E]/20">
+                        <IconComponent className="w-6 h-6 text-[#0BA14E]" strokeWidth={2.5} />
                       </div>
                       <span className="text-sm md:text-base font-semibold text-gray-400 uppercase tracking-wide">
                         {step.day}
@@ -394,8 +394,8 @@ export default function HowItWorks() {
 
                     {/* Mobile: Icon and Day */}
                     <div className="md:hidden flex items-center gap-4 mb-6">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#34D399]/10 shadow-md border border-[#34D399]/20">
-                        <IconComponent className="w-6 h-6 text-[#34D399]" strokeWidth={2.5} />
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0BA14E]/10 shadow-md border border-[#0BA14E]/20">
+                        <IconComponent className="w-6 h-6 text-[#0BA14E]" strokeWidth={2.5} />
                       </div>
                       <span className="text-sm font-semibold text-gray-400 uppercase tracking-wide">
                         {step.day}
@@ -403,7 +403,7 @@ export default function HowItWorks() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-white leading-tight group-hover:text-[#34D399] transition-colors duration-300 relative z-10">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-white leading-tight group-hover:text-[#0BA14E] transition-colors duration-300 relative z-10">
                       {step.title}
                     </h3>
                     <p className="text-sm md:text-base text-gray-400 leading-relaxed relative z-10">
@@ -411,7 +411,7 @@ export default function HowItWorks() {
                     </p>
 
                     {/* Bottom accent line */}
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#34D399]/30 via-[#34D399] to-[#34D399]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0BA14E]/30 via-[#0BA14E] to-[#0BA14E]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl"></div>
                   </div>
                 </div>
               );
@@ -466,7 +466,7 @@ export default function HowItWorks() {
             style={{
               transitionDelay: showNextSection ? '200ms' : '0ms',
             }}>
-              <Smartphone className={`w-16 h-16 mx-auto mb-6 text-[#34D399] transition-all duration-1000 ease-out ${
+              <Smartphone className={`w-16 h-16 mx-auto mb-6 text-[#0BA14E] transition-all duration-1000 ease-out ${
                 showNextSection
                   ? 'opacity-100 scale-100 rotate-0'
                   : 'opacity-0 scale-75 rotate-12'
@@ -503,7 +503,7 @@ export default function HowItWorks() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
               {/* Uber */}
-              <div className={`bg-[#0D1020] backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-3xl transition-all duration-700 ease-out hover:-translate-y-2 border border-[#34D399]/20 hover:border-[#34D399]/40 flex flex-col items-center justify-center ${
+              <div className={`bg-[#0D1020] backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-3xl transition-all duration-700 ease-out hover:-translate-y-2 border border-[#0BA14E]/20 hover:border-[#0BA14E]/40 flex flex-col items-center justify-center ${
                 showNextSection
                   ? 'opacity-100 translate-y-0 scale-100'
                   : 'opacity-0 translate-y-8 scale-95'
@@ -524,7 +524,7 @@ export default function HowItWorks() {
               </div>
 
               {/* Bolt */}
-              <div className={`bg-[#0D1020] backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-3xl transition-all duration-700 ease-out hover:-translate-y-2 border border-[#34D399]/20 hover:border-[#34D399]/40 flex flex-col items-center justify-center ${
+              <div className={`bg-[#0D1020] backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-3xl transition-all duration-700 ease-out hover:-translate-y-2 border border-[#0BA14E]/20 hover:border-[#0BA14E]/40 flex flex-col items-center justify-center ${
                 showNextSection
                   ? 'opacity-100 translate-y-0 scale-100'
                   : 'opacity-0 translate-y-8 scale-95'
@@ -545,7 +545,7 @@ export default function HowItWorks() {
               </div>
 
               {/* FreeNow */}
-              <div className={`bg-[#0D1020] backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-3xl transition-all duration-700 ease-out hover:-translate-y-2 border border-[#34D399]/20 hover:border-[#34D399]/40 flex flex-col items-center justify-center ${
+              <div className={`bg-[#0D1020] backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-3xl transition-all duration-700 ease-out hover:-translate-y-2 border border-[#0BA14E]/20 hover:border-[#0BA14E]/40 flex flex-col items-center justify-center ${
                 showNextSection
                   ? 'opacity-100 translate-y-0 scale-100'
                   : 'opacity-0 translate-y-8 scale-95'

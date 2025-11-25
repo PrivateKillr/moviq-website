@@ -183,7 +183,7 @@ export default function Requirements() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
           {/* Basic Requirements */}
           <div 
-            className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 transition-all duration-1000 ease-out ${
+            className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#0BA14E]/20 transition-all duration-1000 ease-out ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-8'
@@ -194,8 +194,8 @@ export default function Requirements() {
             }}
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20">
-                <Car className="w-7 h-7 text-[#34D399]" strokeWidth={2.5} />
+              <div className="w-14 h-14 rounded-2xl bg-[#0BA14E]/10 flex items-center justify-center border-2 border-[#0BA14E]/20">
+                <Car className="w-7 h-7 text-[#0BA14E]" strokeWidth={2.5} />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white">
                 Podstawowe wymagania
@@ -216,8 +216,8 @@ export default function Requirements() {
                       transitionDelay: `${600 + index * 100}ms`,
                     }}
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#34D399]/10 flex items-center justify-center mt-0.5 border border-[#34D399]/20">
-                      <IconComponent className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#0BA14E]/10 flex items-center justify-center mt-0.5 border border-[#0BA14E]/20">
+                      <IconComponent className="w-5 h-5 text-[#0BA14E]" strokeWidth={2.5} />
                     </div>
                     <span className="text-sm md:text-base text-gray-300 leading-relaxed font-medium pt-1">
                       {req.text}
@@ -230,7 +230,7 @@ export default function Requirements() {
 
           {/* Documents */}
           <div 
-            className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 transition-all duration-1000 ease-out ${
+            className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#0BA14E]/20 transition-all duration-1000 ease-out ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-8'
@@ -241,8 +241,8 @@ export default function Requirements() {
             }}
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20">
-                <FileCheck className="w-7 h-7 text-[#34D399]" strokeWidth={2.5} />
+              <div className="w-14 h-14 rounded-2xl bg-[#0BA14E]/10 flex items-center justify-center border-2 border-[#0BA14E]/20">
+                <FileCheck className="w-7 h-7 text-[#0BA14E]" strokeWidth={2.5} />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white">
                 Dokumenty i badania, które pomagamy zorganizować
@@ -263,8 +263,8 @@ export default function Requirements() {
                       transitionDelay: `${700 + index * 100}ms`,
                     }}
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#34D399]/10 flex items-center justify-center mt-0.5 border border-[#34D399]/20">
-                      <IconComponent className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#0BA14E]/10 flex items-center justify-center mt-0.5 border border-[#0BA14E]/20">
+                      <IconComponent className="w-5 h-5 text-[#0BA14E]" strokeWidth={2.5} />
                     </div>
                     <span className="text-sm md:text-base text-gray-300 leading-relaxed font-medium pt-1">
                       {doc.text}

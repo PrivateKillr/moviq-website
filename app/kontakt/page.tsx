@@ -244,10 +244,10 @@ export default function KontaktPage() {
                 transitionDelay: '200ms',
               }}
             >
-              <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 h-full">
+              <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#0BA14E]/20 h-full">
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-2xl bg-[#34D399]/10 border-2 border-[#34D399]/20 flex items-center justify-center">
-                    <MessageSquare className="w-7 h-7 text-[#34D399]" strokeWidth={2.5} />
+                  <div className="w-14 h-14 rounded-2xl bg-[#0BA14E]/10 border-2 border-[#0BA14E]/20 flex items-center justify-center">
+                    <MessageSquare className="w-7 h-7 text-[#0BA14E]" strokeWidth={2.5} />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white">
                     Napisz do nas
@@ -260,14 +260,14 @@ export default function KontaktPage() {
                 {/* Contact Information */}
                 <div className="space-y-5 mb-8 pt-6 border-t border-gray-800">
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    <div className="w-10 h-10 rounded-xl bg-[#0BA14E]/10 border border-[#0BA14E]/20 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-[#0BA14E]" strokeWidth={2.5} />
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-gray-400 mb-1">Telefon</p>
                       <a
                         href="tel:+48123456789"
-                        className="text-sm md:text-base text-white hover:text-[#34D399] transition-colors duration-300"
+                        className="text-sm md:text-base text-white hover:text-[#0BA14E] transition-colors duration-300"
                       >
                         +48 123 456 789
                       </a>
@@ -275,14 +275,14 @@ export default function KontaktPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    <div className="w-10 h-10 rounded-xl bg-[#0BA14E]/10 border border-[#0BA14E]/20 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-[#0BA14E]" strokeWidth={2.5} />
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-gray-400 mb-1">E-mail</p>
                       <a
                         href="mailto:kontakt@moviq.pl"
-                        className="text-sm md:text-base text-white hover:text-[#34D399] transition-colors duration-300"
+                        className="text-sm md:text-base text-white hover:text-[#0BA14E] transition-colors duration-300"
                       >
                         kontakt@moviq.pl
                       </a>
@@ -290,8 +290,8 @@ export default function KontaktPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    <div className="w-10 h-10 rounded-xl bg-[#0BA14E]/10 border border-[#0BA14E]/20 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-[#0BA14E]" strokeWidth={2.5} />
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-gray-400 mb-1">Adres</p>
@@ -299,7 +299,7 @@ export default function KontaktPage() {
                         href="https://maps.google.com/?q=Centralna+2T+Osielsko"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm md:text-base text-white hover:text-[#34D399] transition-colors duration-300"
+                        className="text-sm md:text-base text-white hover:text-[#0BA14E] transition-colors duration-300"
                       >
                         Centralna 2T 86-031 Osielsko
                       </a>
@@ -307,8 +307,8 @@ export default function KontaktPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    <div className="w-10 h-10 rounded-xl bg-[#0BA14E]/10 border border-[#0BA14E]/20 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-[#0BA14E]" strokeWidth={2.5} />
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-gray-400 mb-1">Godziny pracy</p>
@@ -322,19 +322,19 @@ export default function KontaktPage() {
                 {/* Benefits */}
                 <div className="space-y-4 pt-6 border-t border-gray-800">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <CheckCircle2 className="w-6 h-6 text-[#0BA14E] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                       Odpowiadamy na wszystkie zapytania
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <CheckCircle2 className="w-6 h-6 text-[#0BA14E] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                       Pomagamy w całym procesie rejestracji
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <CheckCircle2 className="w-6 h-6 text-[#0BA14E] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                       Jasne odpowiedzi na wszystkie pytania
                     </p>
@@ -354,7 +354,7 @@ export default function KontaktPage() {
                 transitionDelay: '400ms',
               }}
             >
-              <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20">
+              <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#0BA14E]/20">
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <label
@@ -370,7 +370,7 @@ export default function KontaktPage() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                       placeholder="Jan Kowalski"
                     />
                   </div>
@@ -390,7 +390,7 @@ export default function KontaktPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                        className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                         placeholder="jan.kowalski@example.com"
                       />
                     </div>
@@ -408,7 +408,7 @@ export default function KontaktPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                        className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                         placeholder="+48 123 456 789"
                       />
                     </div>
@@ -427,7 +427,7 @@ export default function KontaktPage() {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                     >
                       <option value="">Wybierz temat</option>
                       <option value="rejestracja">Rejestracja jako kierowca</option>
@@ -451,12 +451,12 @@ export default function KontaktPage() {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all resize-none text-white"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all resize-none text-white"
                       placeholder="Napisz swoją wiadomość..."
                     />
                   </div>
 
-                  <div className="flex items-start bg-[#34D399]/5 rounded-xl p-3 border border-[#34D399]/20">
+                  <div className="flex items-start bg-[#0BA14E]/5 rounded-xl p-3 border border-[#0BA14E]/20">
                     <input
                       type="checkbox"
                       id="rodo"
@@ -464,7 +464,7 @@ export default function KontaktPage() {
                       required
                       checked={formData.rodo}
                       onChange={handleChange}
-                      className="mt-1 mr-3 w-4 h-4 text-[#34D399] border-gray-600 rounded focus:ring-[#34D399] focus:ring-2 bg-gray-800"
+                      className="mt-1 mr-3 w-4 h-4 text-[#0BA14E] border-gray-600 rounded focus:ring-[#0BA14E] focus:ring-2 bg-gray-800"
                     />
                     <label htmlFor="rodo" className="text-xs text-gray-300 leading-relaxed">
                       Wyrażam zgodę na kontakt telefoniczny i mailowy w sprawie
@@ -488,7 +488,7 @@ export default function KontaktPage() {
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className={`w-full bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
+                      className={`w-full bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
                         isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                       }`}
                       style={{

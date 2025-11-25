@@ -28,7 +28,7 @@ export default function Footer() {
             </p>
             <Link
               href="/#kierowca"
-              className="text-gray-400 hover:text-[#34D399] transition-colors duration-200 text-sm block mb-2"
+              className="text-gray-400 hover:text-[#0BA14E] transition-colors duration-200 text-sm block mb-2"
             >
               Start
             </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#aplikuj"
-                  className="text-gray-400 hover:text-[#34D399] transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-[#0BA14E] transition-colors duration-200 text-sm"
                 >
                   Aplikuj
                 </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#wyplaty"
-                  className="text-gray-400 hover:text-[#34D399] transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-[#0BA14E] transition-colors duration-200 text-sm"
                 >
                   Wypłaty
                 </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#praca-od-zaraz"
-                  className="text-gray-400 hover:text-[#34D399] transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-[#0BA14E] transition-colors duration-200 text-sm"
                 >
                   Praca od zaraz
                 </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#faq"
-                  className="text-gray-400 hover:text-[#34D399] transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-[#0BA14E] transition-colors duration-200 text-sm"
                 >
                   FAQ
                 </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/kontakt"
-                  className="text-gray-400 hover:text-[#34D399] transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-[#0BA14E] transition-colors duration-200 text-sm"
                 >
                   Kontakt
                 </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-[#34D399] transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-[#0BA14E] transition-colors duration-200 text-sm"
                 >
                   Polityka prywatności
                 </a>
@@ -96,7 +96,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-[#34D399] transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-[#0BA14E] transition-colors duration-200 text-sm"
                 >
                   Regulamin
                 </a>
@@ -112,7 +112,7 @@ export default function Footer() {
             </p>
             <Link
               href="/kontakt"
-              className="inline-block bg-[#34D399] text-white px-6 py-2 rounded-lg font-semibold text-sm hover:bg-[#10b981] hover:shadow-lg transition-all duration-200"
+              className="inline-block bg-[#0BA14E] text-white px-6 py-2 rounded-lg font-semibold text-sm hover:bg-[#10b981] hover:shadow-lg transition-all duration-200"
             >
               Napisz do nas
             </Link>

@@ -177,7 +177,7 @@ export default function Hero() {
                   }}
                 >
                   <svg
-                    className="w-6 h-6 md:w-7 md:h-7 text-[#34D399] mr-4 flex-shrink-0 mt-0.5"
+                    className="w-6 h-6 md:w-7 md:h-7 text-[#0BA14E] mr-4 flex-shrink-0 mt-0.5"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -205,7 +205,7 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollToSection('aplikuj')}
-                className="group bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all duration-300 text-center transform hover:scale-105 active:scale-100"
+                className="group bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all duration-300 text-center transform hover:scale-105 active:scale-100"
                 style={{
                   boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
                 }}
@@ -214,7 +214,7 @@ export default function Hero() {
               </button>
               <button
                 onClick={() => scrollToSection('jak-to-dziala')}
-                className="group border-2 border-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base bg-transparent hover:bg-[#34D399]/10 focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-100"
+                className="group border-2 border-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base bg-transparent hover:bg-[#0BA14E]/10 focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-100"
               >
                 Zobacz jak to działa
               </button>
@@ -230,7 +230,7 @@ export default function Hero() {
             }`}
           >
             <div
-              className="group relative bg-[#0D1020] rounded-3xl p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-[#34D399]/20 hover:border-[#34D399]/40"
+              className="group relative bg-[#0D1020] rounded-3xl p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-[#0BA14E]/20 hover:border-[#0BA14E]/40"
               style={{
                 boxShadow: '0 25px 70px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.4)',
               }}
@@ -239,7 +239,7 @@ export default function Hero() {
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-4">
                   <svg
-                    className="w-6 h-6 text-[#34D399]"
+                    className="w-6 h-6 text-[#0BA14E]"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -257,7 +257,7 @@ export default function Hero() {
               
                 <div className="mb-2">
                   <div
-                    className="text-4xl lg:text-5xl xl:text-6xl font-black text-[#34D399] mb-2 leading-none"
+                    className="text-4xl lg:text-5xl xl:text-6xl font-black text-[#0BA14E] mb-2 leading-none"
                     style={{
                       letterSpacing: '-0.02em',
                     }}
@@ -271,8 +271,8 @@ export default function Hero() {
               </div>
               
               {/* Decorative elements */}
-              <div className="absolute top-4 right-4 w-16 h-16 bg-[#34D399]/10 rounded-full blur-xl"></div>
-              <div className="absolute bottom-4 left-4 w-12 h-12 bg-[#34D399]/10 rounded-full blur-lg"></div>
+              <div className="absolute top-4 right-4 w-16 h-16 bg-[#0BA14E]/10 rounded-full blur-xl"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 bg-[#0BA14E]/10 rounded-full blur-lg"></div>
             </div>
           </div>
         </div>

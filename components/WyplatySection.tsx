@@ -131,13 +131,13 @@ export default function WyplatySection() {
             return (
               <div
                 key={index}
-                className="bg-[#0D1020] rounded-2xl p-6 shadow-xl border-2 border-[#34D399]/20 hover:border-[#34D399]/40 transition-all duration-300"
+                className="bg-[#0D1020] rounded-2xl p-6 shadow-xl border-2 border-[#0BA14E]/20 hover:border-[#0BA14E]/40 transition-all duration-300"
                 style={{
                   transitionDelay: `${600 + index * 100}ms`,
                   boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3), 0 4px 15px rgba(0, 0, 0, 0.2)',
                 }}
               >
-                <IconComponent className="w-8 h-8 text-[#34D399] mx-auto mb-3" strokeWidth={2.5} />
+                <IconComponent className="w-8 h-8 text-[#0BA14E] mx-auto mb-3" strokeWidth={2.5} />
                 <div className="text-xl font-bold text-white mb-1 text-center">{stat.value}</div>
                 <div className="text-xs text-gray-400 text-center">{stat.label}</div>
               </div>
@@ -166,7 +166,7 @@ export default function WyplatySection() {
               return (
                 <div
                   key={step.number}
-                  className={`group relative bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-xl border-2 border-[#34D399]/20 hover:border-[#34D399]/40 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden ${
+                  className={`group relative bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-xl border-2 border-[#0BA14E]/20 hover:border-[#0BA14E]/40 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden ${
                     isVisible
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-8'
@@ -178,14 +178,14 @@ export default function WyplatySection() {
                 >
                   <div className="relative z-10">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-16 h-16 rounded-2xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
-                        <IconComponent className="w-8 h-8 text-[#34D399]" strokeWidth={2.5} />
+                      <div className="w-16 h-16 rounded-2xl bg-[#0BA14E]/10 flex items-center justify-center border-2 border-[#0BA14E]/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                        <IconComponent className="w-8 h-8 text-[#0BA14E]" strokeWidth={2.5} />
                       </div>
-                      <div className="w-12 h-12 bg-[#34D399] text-white rounded-full flex items-center justify-center text-xl font-black shadow-lg">
+                      <div className="w-12 h-12 bg-[#0BA14E] text-white rounded-full flex items-center justify-center text-xl font-black shadow-lg">
                         {step.number}
                       </div>
                     </div>
-                    <h4 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-[#34D399] transition-colors duration-300">
+                    <h4 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-[#0BA14E] transition-colors duration-300">
                       {step.title}
                     </h4>
                     <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-4">
@@ -222,7 +222,7 @@ export default function WyplatySection() {
                     )}
                   </div>
                   
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#34D399]/30 via-[#34D399] to-[#34D399]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0BA14E]/30 via-[#0BA14E] to-[#0BA14E]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl"></div>
                 </div>
               );
             })}
@@ -263,7 +263,7 @@ export default function WyplatySection() {
               return (
                 <div
                   key={index}
-                  className={`group relative bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-[#34D399]/20 hover:border-[#34D399]/40 hover:-translate-y-3 overflow-hidden ${
+                  className={`group relative bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-[#0BA14E]/20 hover:border-[#0BA14E]/40 hover:-translate-y-3 overflow-hidden ${
                     isVisible
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-8'
@@ -274,13 +274,13 @@ export default function WyplatySection() {
                   }}
                 >
                   {/* Decorative gradient background on hover */}
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#34D399]/5 via-transparent to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#0BA14E]/5 via-transparent to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10 flex items-start gap-6">
                     {/* Icon with green check - positioned top left */}
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-[#34D399]/10 flex items-center justify-center group-hover:bg-[#34D399]/20 transition-all duration-300 border-2 border-[#34D399]/20 group-hover:border-[#34D399]/40 shadow-md group-hover:shadow-lg group-hover:scale-110">
-                        <IconComponent className="w-8 h-8 text-[#34D399] group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
+                      <div className="w-16 h-16 rounded-2xl bg-[#0BA14E]/10 flex items-center justify-center group-hover:bg-[#0BA14E]/20 transition-all duration-300 border-2 border-[#0BA14E]/20 group-hover:border-[#0BA14E]/40 shadow-md group-hover:shadow-lg group-hover:scale-110">
+                        <IconComponent className="w-8 h-8 text-[#0BA14E] group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
                       </div>
                     </div>
 
@@ -293,10 +293,10 @@ export default function WyplatySection() {
                   </div>
 
                   {/* Bottom accent line - always visible but stronger on hover */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#34D399]/30 via-[#34D399] to-[#34D399]/30 group-hover:from-[#34D399] via-[#34D399] to-[#34D399] transition-all duration-500 rounded-b-3xl"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0BA14E]/30 via-[#0BA14E] to-[#0BA14E]/30 group-hover:from-[#0BA14E] via-[#0BA14E] to-[#0BA14E] transition-all duration-500 rounded-b-3xl"></div>
                   
                   {/* Top accent glow on hover */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#34D399]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-3xl"></div>
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#0BA14E]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-3xl"></div>
                 </div>
               );
             })}
@@ -320,7 +320,7 @@ export default function WyplatySection() {
                   element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
               }}
-              className="inline-block bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 transition-all duration-300 transform hover:scale-105 active:scale-100"
+              className="inline-block bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-105 active:scale-100"
               style={{
                 boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
               }}

@@ -152,17 +152,17 @@ export default function PanelKierowcyPage() {
             style={{
               transitionDelay: '200ms',
             }}>
-              <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 relative overflow-hidden">
+              <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#0BA14E]/20 relative overflow-hidden">
                 {/* Decorative gradient */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#34D399]/10 via-transparent to-transparent rounded-full blur-3xl"></div>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#0BA14E]/10 via-transparent to-transparent rounded-full blur-3xl"></div>
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-8">
-                    <div className="w-12 h-12 rounded-xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20">
+                    <div className="w-12 h-12 rounded-xl bg-[#0BA14E]/10 flex items-center justify-center border-2 border-[#0BA14E]/20">
                       {isLoginMode ? (
-                        <LogIn className="w-6 h-6 text-[#34D399]" strokeWidth={2.5} />
+                        <LogIn className="w-6 h-6 text-[#0BA14E]" strokeWidth={2.5} />
                       ) : (
-                        <UserPlus className="w-6 h-6 text-[#34D399]" strokeWidth={2.5} />
+                        <UserPlus className="w-6 h-6 text-[#0BA14E]" strokeWidth={2.5} />
                       )}
                     </div>
                     <h2 className="text-xl md:text-2xl font-bold text-white">
@@ -190,7 +190,7 @@ export default function PanelKierowcyPage() {
                             required
                             value={loginData.email}
                             onChange={handleLoginChange}
-                            className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                            className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                             placeholder="twoj.email@example.com"
                           />
                         </div>
@@ -214,7 +214,7 @@ export default function PanelKierowcyPage() {
                             required
                             value={loginData.password}
                             onChange={handleLoginChange}
-                            className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                            className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                             placeholder="••••••••"
                           />
                         </div>
@@ -226,7 +226,7 @@ export default function PanelKierowcyPage() {
                             type="checkbox"
                             id="remember"
                             name="remember"
-                            className="w-4 h-4 text-[#34D399] border-gray-600 rounded focus:ring-[#34D399] focus:ring-2 bg-gray-800"
+                            className="w-4 h-4 text-[#0BA14E] border-gray-600 rounded focus:ring-[#0BA14E] focus:ring-2 bg-gray-800"
                           />
                           <label htmlFor="remember" className="ml-2 text-xs text-gray-400">
                             Zapamiętaj mnie
@@ -234,7 +234,7 @@ export default function PanelKierowcyPage() {
                         </div>
                         <a
                           href="#"
-                          className="text-xs text-[#34D399] hover:text-[#10b981] transition-colors duration-200"
+                          className="text-xs text-[#0BA14E] hover:text-[#10b981] transition-colors duration-200"
                         >
                           Zapomniałeś hasła?
                         </a>
@@ -256,7 +256,7 @@ export default function PanelKierowcyPage() {
                       <div className="pt-2 space-y-3">
                         <button
                           type="submit"
-                          className={`w-full bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
+                          className={`w-full bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
                             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                           }`}
                           style={{
@@ -295,7 +295,7 @@ export default function PanelKierowcyPage() {
                         <button
                           type="button"
                           onClick={() => setIsLoginMode(false)}
-                          className="w-full border-2 border-[#34D399] text-[#34D399] px-6 py-3 rounded-xl font-semibold text-base bg-transparent hover:bg-[#34D399]/10 transition-all duration-300 transform hover:scale-[1.02] active:scale-100"
+                          className="w-full border-2 border-[#0BA14E] text-[#0BA14E] px-6 py-3 rounded-xl font-semibold text-base bg-transparent hover:bg-[#0BA14E]/10 transition-all duration-300 transform hover:scale-[1.02] active:scale-100"
                         >
                           Zarejestruj się
                         </button>
@@ -318,7 +318,7 @@ export default function PanelKierowcyPage() {
                             required
                             value={registerData.name}
                             onChange={handleRegisterChange}
-                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                             placeholder="Jan Kowalski"
                           />
                         </div>
@@ -336,7 +336,7 @@ export default function PanelKierowcyPage() {
                             required
                             value={registerData.phone}
                             onChange={handleRegisterChange}
-                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                             placeholder="+48 123 456 789"
                           />
                         </div>
@@ -357,7 +357,7 @@ export default function PanelKierowcyPage() {
                             required
                             value={registerData.email}
                             onChange={handleRegisterChange}
-                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                             placeholder="jan.kowalski@example.com"
                           />
                         </div>
@@ -375,7 +375,7 @@ export default function PanelKierowcyPage() {
                             required
                             value={registerData.city}
                             onChange={handleRegisterChange}
-                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                             placeholder="Warszawa"
                           />
                         </div>
@@ -395,7 +395,7 @@ export default function PanelKierowcyPage() {
                             required
                             value={registerData.hasCar}
                             onChange={handleRegisterChange}
-                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                           >
                             <option value="">Wybierz</option>
                             <option value="yes">Tak</option>
@@ -416,7 +416,7 @@ export default function PanelKierowcyPage() {
                             required
                             value={registerData.workType}
                             onChange={handleRegisterChange}
-                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
+                            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all text-white"
                           >
                             <option value="">Wybierz</option>
                             <option value="taxi">Taxi</option>
@@ -439,12 +439,12 @@ export default function PanelKierowcyPage() {
                           rows={3}
                           value={registerData.message}
                           onChange={handleRegisterChange}
-                          className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all resize-none text-white"
+                          className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all resize-none text-white"
                           placeholder="Masz pytania? Napisz tutaj..."
                         />
                       </div>
 
-                      <div className="flex items-start bg-[#34D399]/5 rounded-xl p-3 border border-[#34D399]/20">
+                      <div className="flex items-start bg-[#0BA14E]/5 rounded-xl p-3 border border-[#0BA14E]/20">
                         <input
                           type="checkbox"
                           id="rodo"
@@ -452,7 +452,7 @@ export default function PanelKierowcyPage() {
                           required
                           checked={registerData.rodo}
                           onChange={handleRegisterChange}
-                          className="mt-1 mr-3 w-4 h-4 text-[#34D399] border-gray-600 rounded focus:ring-[#34D399] focus:ring-2 bg-gray-800"
+                          className="mt-1 mr-3 w-4 h-4 text-[#0BA14E] border-gray-600 rounded focus:ring-[#0BA14E] focus:ring-2 bg-gray-800"
                         />
                         <label htmlFor="rodo" className="text-xs text-gray-300 leading-relaxed">
                           Wyrażam zgodę na kontakt telefoniczny i mailowy w sprawie oferty
@@ -476,7 +476,7 @@ export default function PanelKierowcyPage() {
                       <div className="pt-2 space-y-3">
                         <button
                           type="submit"
-                          className={`w-full bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
+                          className={`w-full bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
                             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                           }`}
                           style={{
@@ -515,7 +515,7 @@ export default function PanelKierowcyPage() {
                         <button
                           type="button"
                           onClick={() => setIsLoginMode(true)}
-                          className="w-full border-2 border-[#34D399] text-[#34D399] px-6 py-3 rounded-xl font-semibold text-base bg-transparent hover:bg-[#34D399]/10 transition-all duration-300 transform hover:scale-[1.02] active:scale-100"
+                          className="w-full border-2 border-[#0BA14E] text-[#0BA14E] px-6 py-3 rounded-xl font-semibold text-base bg-transparent hover:bg-[#0BA14E]/10 transition-all duration-300 transform hover:scale-[1.02] active:scale-100"
                         >
                           Zaloguj się
                         </button>
@@ -600,7 +600,7 @@ export default function PanelKierowcyPage() {
                               return (
                                 <div key={index} className="flex items-start gap-3">
                                   <IconComponent
-                                    className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5 drop-shadow-lg"
+                                    className="w-6 h-6 text-[#0BA14E] flex-shrink-0 mt-0.5 drop-shadow-lg"
                                     strokeWidth={2.5}
                                   />
                                   <span 
@@ -655,7 +655,7 @@ export default function PanelKierowcyPage() {
                               return (
                                 <div key={index} className="flex items-start gap-3">
                                   <IconComponent
-                                    className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5 drop-shadow-lg"
+                                    className="w-6 h-6 text-[#0BA14E] flex-shrink-0 mt-0.5 drop-shadow-lg"
                                     strokeWidth={2.5}
                                   />
                                   <span 

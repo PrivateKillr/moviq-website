@@ -109,14 +109,14 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.anchor)}
-                className="text-white hover:text-[#34D399] focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded transition-colors duration-200 font-medium"
+                className="text-white hover:text-[#0BA14E] focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded transition-colors duration-200 font-medium"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="/panel-kierowcy"
-              className="bg-[#34D399] text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#10b981] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
+              className="bg-[#0BA14E] text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#10b981] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
               style={{
                 boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
               }}
@@ -129,7 +129,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-3">
             <Link
               href="/panel-kierowcy"
-              className="bg-[#34D399] text-white px-3 py-2 rounded-lg font-semibold text-xs hover:bg-[#10b981] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
+              className="bg-[#0BA14E] text-white px-3 py-2 rounded-lg font-semibold text-xs hover:bg-[#10b981] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
               onClick={() => setIsOpen(false)}
               style={{
                 boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
@@ -140,7 +140,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               onKeyDown={handleKeyDown}
-              className="text-white hover:text-[#34D399] focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded transition-colors duration-200"
+              className="text-white hover:text-[#0BA14E] focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded transition-colors duration-200"
               aria-label={isOpen ? 'Zamknij menu' : 'Otwórz menu'}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
@@ -179,7 +179,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.anchor)}
-                  className="text-white hover:text-[#34D399] focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded transition-colors duration-200 font-medium py-2"
+                  className="text-white hover:text-[#0BA14E] focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded transition-colors duration-200 font-medium py-2"
                   role="menuitem"
                 >
                   {link.label}

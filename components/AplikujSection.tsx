@@ -181,13 +181,13 @@ export default function AplikujSection() {
           style={{
             transitionDelay: '200ms',
           }}>
-            <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#34D399]/10 via-transparent to-transparent rounded-full blur-3xl"></div>
+            <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#0BA14E]/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#0BA14E]/10 via-transparent to-transparent rounded-full blur-3xl"></div>
               
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20">
-                    <Users className="w-6 h-6 text-[#34D399]" strokeWidth={2.5} aria-hidden="true" />
+                  <div className="w-12 h-12 rounded-xl bg-[#0BA14E]/10 flex items-center justify-center border-2 border-[#0BA14E]/20">
+                    <Users className="w-6 h-6 text-[#0BA14E]" strokeWidth={2.5} aria-hidden="true" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-white">
                     Formularz zgłoszeniowy
@@ -214,8 +214,8 @@ export default function AplikujSection() {
                         aria-required="true"
                         aria-invalid={fieldErrors.name ? 'true' : 'false'}
                         aria-describedby={fieldErrors.name ? 'name-error' : undefined}
-                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
-                          fieldErrors.name ? 'border-red-500' : 'border-gray-800 focus:border-[#34D399]'
+                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
+                          fieldErrors.name ? 'border-red-500' : 'border-gray-800 focus:border-[#0BA14E]'
                         }`}
                         placeholder="Jan Kowalski"
                       />
@@ -243,8 +243,8 @@ export default function AplikujSection() {
                         aria-required="true"
                         aria-invalid={fieldErrors.phone ? 'true' : 'false'}
                         aria-describedby={fieldErrors.phone ? 'phone-error' : undefined}
-                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
-                          fieldErrors.phone ? 'border-red-500' : 'border-gray-800 focus:border-[#34D399]'
+                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
+                          fieldErrors.phone ? 'border-red-500' : 'border-gray-800 focus:border-[#0BA14E]'
                         }`}
                         placeholder="+48 123 456 789"
                       />
@@ -275,8 +275,8 @@ export default function AplikujSection() {
                         aria-required="true"
                         aria-invalid={fieldErrors.email ? 'true' : 'false'}
                         aria-describedby={fieldErrors.email ? 'email-error' : undefined}
-                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
-                          fieldErrors.email ? 'border-red-500' : 'border-gray-800 focus:border-[#34D399]'
+                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
+                          fieldErrors.email ? 'border-red-500' : 'border-gray-800 focus:border-[#0BA14E]'
                         }`}
                         placeholder="jan.kowalski@example.com"
                       />
@@ -304,8 +304,8 @@ export default function AplikujSection() {
                         aria-required="true"
                         aria-invalid={fieldErrors.city ? 'true' : 'false'}
                         aria-describedby={fieldErrors.city ? 'city-error' : undefined}
-                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
-                          fieldErrors.city ? 'border-red-500' : 'border-gray-800 focus:border-[#34D399]'
+                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
+                          fieldErrors.city ? 'border-red-500' : 'border-gray-800 focus:border-[#0BA14E]'
                         }`}
                         placeholder="Warszawa"
                       />
@@ -334,8 +334,8 @@ export default function AplikujSection() {
                         aria-required="true"
                         aria-invalid={fieldErrors.hasCar ? 'true' : 'false'}
                         aria-describedby={fieldErrors.hasCar ? 'hasCar-error' : undefined}
-                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
-                          fieldErrors.hasCar ? 'border-red-500' : 'border-gray-800 focus:border-[#34D399]'
+                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
+                          fieldErrors.hasCar ? 'border-red-500' : 'border-gray-800 focus:border-[#0BA14E]'
                         }`}
                       >
                         <option value="">Wybierz</option>
@@ -365,8 +365,8 @@ export default function AplikujSection() {
                         aria-required="true"
                         aria-invalid={fieldErrors.workType ? 'true' : 'false'}
                         aria-describedby={fieldErrors.workType ? 'workType-error' : undefined}
-                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
-                          fieldErrors.workType ? 'border-red-500' : 'border-gray-800 focus:border-[#34D399]'
+                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
+                          fieldErrors.workType ? 'border-red-500' : 'border-gray-800 focus:border-[#0BA14E]'
                         }`}
                       >
                         <option value="">Wybierz</option>
@@ -396,8 +396,8 @@ export default function AplikujSection() {
                         aria-required="true"
                         aria-invalid={fieldErrors.workType ? 'true' : 'false'}
                         aria-describedby={fieldErrors.workType ? 'workType-error' : undefined}
-                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
-                          fieldErrors.workType ? 'border-red-500' : 'border-gray-800 focus:border-[#34D399]'
+                        className={`w-full px-4 py-3 bg-[#020617] border-2 rounded-xl focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all text-white ${
+                          fieldErrors.workType ? 'border-red-500' : 'border-gray-800 focus:border-[#0BA14E]'
                         }`}
                       >
                         <option value="">Wybierz</option>
@@ -426,13 +426,13 @@ export default function AplikujSection() {
                       rows={3}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#020617] border-2 border-gray-800 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all resize-none text-white"
+                      className="w-full px-4 py-3 bg-[#020617] border-2 border-gray-800 rounded-xl focus:ring-2 focus:ring-[#0BA14E] focus:border-[#0BA14E] outline-none transition-all resize-none text-white"
                       placeholder="Masz pytania? Napisz tutaj..."
                     />
                   </div>
 
-                  <div className={`flex items-start bg-[#34D399]/5 rounded-xl p-4 border-2 ${
-                    fieldErrors.rodo ? 'border-red-500/50' : 'border-[#34D399]/20'
+                  <div className={`flex items-start bg-[#0BA14E]/5 rounded-xl p-4 border-2 ${
+                    fieldErrors.rodo ? 'border-red-500/50' : 'border-[#0BA14E]/20'
                   }`}>
                     <input
                       type="checkbox"
@@ -444,7 +444,7 @@ export default function AplikujSection() {
                       aria-required="true"
                       aria-invalid={fieldErrors.rodo ? 'true' : 'false'}
                       aria-describedby={fieldErrors.rodo ? 'rodo-error' : undefined}
-                      className="mt-1 mr-3 w-5 h-5 text-[#34D399] border-2 border-gray-700 rounded focus-visible:outline-2 focus-visible:outline-[#34D399] focus-visible:outline-offset-2 bg-[#020617]"
+                      className="mt-1 mr-3 w-5 h-5 text-[#0BA14E] border-2 border-gray-700 rounded focus-visible:outline-2 focus-visible:outline-[#0BA14E] focus-visible:outline-offset-2 bg-[#020617]"
                     />
                     <label htmlFor="rodo" className="text-sm text-gray-300 leading-relaxed">
                       Wyrażam zgodę na kontakt telefoniczny i mailowy w sprawie oferty
@@ -478,7 +478,7 @@ export default function AplikujSection() {
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className={`w-full bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
+                      className={`w-full bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
                         isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                       }`}
                       style={{
@@ -590,7 +590,7 @@ export default function AplikujSection() {
                             return (
                               <div key={index} className="flex items-start gap-3">
                                 <IconComponent
-                                  className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5 drop-shadow-lg"
+                                  className="w-6 h-6 text-[#0BA14E] flex-shrink-0 mt-0.5 drop-shadow-lg"
                                   strokeWidth={2.5}
                                   aria-hidden="true"
                                 />
