@@ -136,7 +136,7 @@ export default function FAQSection() {
                     {faq.question}
                   </span>
                   <div
-                    className={`flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-[#0BA14E] to-[#10b981] flex items-center justify-center transition-all duration-300 ${
+                    className={`flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-[#0BA14E] to-[#089a42] flex items-center justify-center transition-all duration-300 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                     aria-hidden="true"
@@ -175,7 +175,7 @@ export default function FAQSection() {
 
         {/* CTA */}
         <div
-          className={`relative py-12 md:py-16 px-6 md:px-8 overflow-hidden bg-gradient-to-br from-[#0BA14E] via-[#10b981] to-[#0BA14E] rounded-3xl text-white text-center shadow-2xl transition-all duration-1000 ease-out ${
+          className={`relative py-12 md:py-16 px-6 md:px-8 overflow-hidden bg-gradient-to-br from-[#0BA14E] via-[#089a42] to-[#0BA14E] rounded-3xl text-white text-center shadow-2xl transition-all duration-1000 ease-out ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-8'

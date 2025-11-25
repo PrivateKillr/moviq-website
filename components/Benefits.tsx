@@ -137,7 +137,7 @@ export default function Benefits() {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }
             }}
-            className="inline-block bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-105 active:scale-100"
+            className="inline-block bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#089a42] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-105 active:scale-100"
             style={{
               boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
             }}

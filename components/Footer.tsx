@@ -112,7 +112,7 @@ export default function Footer() {
             </p>
             <Link
               href="/kontakt"
-              className="inline-block bg-[#0BA14E] text-white px-6 py-2 rounded-lg font-semibold text-sm hover:bg-[#10b981] hover:shadow-lg transition-all duration-200"
+              className="inline-block bg-[#0BA14E] text-white px-6 py-2 rounded-lg font-semibold text-sm hover:bg-[#089a42] hover:shadow-lg transition-all duration-200"
             >
               Napisz do nas
             </Link>

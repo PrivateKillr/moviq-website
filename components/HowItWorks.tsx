@@ -226,7 +226,7 @@ export default function HowItWorks() {
           }}
         >
           <div className="relative">
-            <div className="bg-gradient-to-br from-[#0BA14E] to-[#10b981] rounded-xl p-3 shadow-2xl border-4 border-[#0D1020]">
+            <div className="bg-gradient-to-br from-[#0BA14E] to-[#089a42] rounded-xl p-3 shadow-2xl border-4 border-[#0D1020]">
               <Car className="w-8 h-8 text-white" strokeWidth={2.5} fill="currentColor" />
             </div>
             <div className="absolute inset-0 bg-[#0BA14E]/30 rounded-xl blur-lg -z-10 animate-pulse"></div>
@@ -375,7 +375,7 @@ export default function HowItWorks() {
                     
                     {isHighlighted && (
                       <div className="absolute bottom-4 right-4 z-20">
-                        <div className="bg-gradient-to-br from-[#0BA14E] to-[#10b981] rounded-full p-3 shadow-xl border-2 border-[#0D1020]/50 animate-bounce">
+                        <div className="bg-gradient-to-br from-[#0BA14E] to-[#089a42] rounded-full p-3 shadow-xl border-2 border-[#0D1020]/50 animate-bounce">
                           <ArrowDown className="w-5 h-5 text-white" strokeWidth={2.5} />
                         </div>
                         <div className="absolute inset-0 bg-[#0BA14E]/30 rounded-full blur-md -z-10 animate-pulse"></div>

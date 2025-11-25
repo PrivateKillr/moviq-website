@@ -286,7 +286,7 @@ export default function PracaOdZarazSection() {
               }}
             >
               <div className="relative">
-                <div className="bg-gradient-to-br from-[#0BA14E] to-[#10b981] rounded-xl p-3 shadow-2xl border-4 border-[#0D1020]">
+                <div className="bg-gradient-to-br from-[#0BA14E] to-[#089a42] rounded-xl p-3 shadow-2xl border-4 border-[#0D1020]">
                   <Car className="w-8 h-8 text-white" strokeWidth={2.5} fill="currentColor" />
                 </div>
                 <div className="absolute inset-0 bg-[#0BA14E]/30 rounded-xl blur-lg -z-10 animate-pulse"></div>
@@ -758,7 +758,7 @@ export default function PracaOdZarazSection() {
         >
           <button
             onClick={() => scrollToSection('aplikuj')}
-            className="group bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-105 active:scale-100 flex items-center justify-center gap-2 mx-auto"
+            className="group bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#089a42] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-105 active:scale-100 flex items-center justify-center gap-2 mx-auto"
             style={{
               boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
             }}

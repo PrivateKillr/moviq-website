@@ -234,7 +234,7 @@ export default function PanelKierowcyPage() {
                         </div>
                         <a
                           href="#"
-                          className="text-xs text-[#0BA14E] hover:text-[#10b981] transition-colors duration-200"
+                          className="text-xs text-[#0BA14E] hover:text-[#089a42] transition-colors duration-200"
                         >
                           Zapomniałeś hasła?
                         </a>
@@ -256,7 +256,7 @@ export default function PanelKierowcyPage() {
                       <div className="pt-2 space-y-3">
                         <button
                           type="submit"
-                          className={`w-full bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
+                          className={`w-full bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#089a42] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
                             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                           }`}
                           style={{
@@ -476,7 +476,7 @@ export default function PanelKierowcyPage() {
                       <div className="pt-2 space-y-3">
                         <button
                           type="submit"
-                          className={`w-full bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
+                          className={`w-full bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#089a42] hover:shadow-2xl hover:shadow-[#0BA14E]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
                             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                           }`}
                           style={{

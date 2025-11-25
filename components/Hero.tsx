@@ -205,7 +205,7 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollToSection('aplikuj')}
-                className="group bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#0BA14E]/30 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all duration-300 text-center transform hover:scale-105 active:scale-100"
+                className="group bg-[#0BA14E] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#089a42] hover:shadow-2xl hover:shadow-[#0BA14E]/30 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded-xl transition-all duration-300 text-center transform hover:scale-105 active:scale-100"
                 style={{
                   boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
                 }}

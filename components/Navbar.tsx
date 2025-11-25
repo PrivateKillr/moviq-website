@@ -116,7 +116,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/panel-kierowcy"
-              className="bg-[#0BA14E] text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#10b981] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
+              className="bg-[#0BA14E] text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#089a42] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
               style={{
                 boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
               }}
@@ -129,7 +129,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-3">
             <Link
               href="/panel-kierowcy"
-              className="bg-[#0BA14E] text-white px-3 py-2 rounded-lg font-semibold text-xs hover:bg-[#10b981] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
+              className="bg-[#0BA14E] text-white px-3 py-2 rounded-lg font-semibold text-xs hover:bg-[#089a42] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
               onClick={() => setIsOpen(false)}
               style={{
                 boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
