@@ -125,8 +125,18 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile menu button - WCAG 2.2: Keyboard accessible with ARIA */}
-          <div className="md:hidden">
+          {/* Mobile: Panel kierowcy button + hamburger menu */}
+          <div className="md:hidden flex items-center gap-3">
+            <Link
+              href="/panel-kierowcy"
+              className="bg-[#34D399] text-white px-3 py-2 rounded-lg font-semibold text-xs hover:bg-[#10b981] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200"
+              onClick={() => setIsOpen(false)}
+              style={{
+                boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
+              }}
+            >
+              Panel kierowcy
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               onKeyDown={handleKeyDown}
@@ -175,17 +185,6 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/panel-kierowcy"
-                className="bg-[#34D399] text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#10b981] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 focus-visible:rounded transition-all duration-200 text-center mt-2"
-                onClick={() => setIsOpen(false)}
-                role="menuitem"
-                style={{
-                  boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
-                }}
-              >
-                Panel kierowcy
-              </Link>
             </nav>
           </div>
         )}
