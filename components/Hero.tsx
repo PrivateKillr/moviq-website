@@ -95,12 +95,6 @@ export default function Hero() {
           className={`absolute inset-0 bg-[#020617] transition-opacity duration-300 ${
             videoLoaded ? 'opacity-0' : 'opacity-100'
           }`}
-          style={{
-            backgroundImage: 'url(/videos/hero-banner-poster.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            filter: 'blur(20px)',
-          }}
         />
 
         {/* Video - WCAG 2.2: Decorative video with proper attributes */}
