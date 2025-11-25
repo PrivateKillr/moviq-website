@@ -279,7 +279,7 @@ export default function PracaOdZarazSection() {
 
             {/* Animated car moving along timeline - zwolniony jeszcze bardziej */}
             <div
-              className="absolute top-0 transition-all duration-3000 ease-out z-20"
+              className="hidden md:block absolute top-0 transition-all duration-3000 ease-out z-20"
               style={{
                 left: `calc(${progress}% - 24px)`,
                 transform: 'translateY(-50%)',
@@ -378,8 +378,8 @@ export default function PracaOdZarazSection() {
                       transitionDelay: `${index * 250 + 400}ms`,
                     }}
                   >
-                    {/* Mobile Timeline dot */}
-                    <div className="md:hidden absolute -left-[3.5rem] top-0">
+                    {/* Mobile Timeline dot - hidden on mobile */}
+                    <div className="hidden absolute -left-[3.5rem] top-0">
                       <div
                         className={`relative transition-all duration-1000 ease-out ${
                           isVisible && progress >= (index + 1) * 25

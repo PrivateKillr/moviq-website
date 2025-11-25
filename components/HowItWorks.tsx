@@ -219,7 +219,7 @@ export default function HowItWorks() {
 
         {/* Animated car moving along timeline */}
         <div
-          className="absolute top-0 transition-all duration-2000 ease-out z-20"
+          className="hidden md:block absolute top-0 transition-all duration-2000 ease-out z-20"
           style={{
             left: `calc(${progress}% - 24px)`,
             transform: 'translateY(-50%)',
