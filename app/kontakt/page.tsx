@@ -8,7 +8,6 @@ import {
   MapPin,
   Clock,
   Send,
-  ArrowRight,
   MessageSquare,
   CheckCircle2,
 } from 'lucide-react';
@@ -26,9 +25,14 @@ export default function KontaktPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setIsVisible(true);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,6 +46,59 @@ export default function KontaktPage() {
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
+    }
+
+    // Video loading
+    const video = videoRef.current;
+    if (video) {
+      video.playbackRate = 0.7;
+
+      const handleVideoReady = () => {
+        setVideoLoaded(true);
+        video.play().catch((err) => {
+          console.log('Video autoplay prevented:', err);
+        });
+      };
+
+      setVideoLoaded(true);
+
+      video.addEventListener('loadeddata', handleVideoReady);
+      video.addEventListener('canplay', handleVideoReady);
+      video.addEventListener('canplaythrough', handleVideoReady);
+      video.addEventListener('loadedmetadata', () => {
+        setVideoLoaded(true);
+        video.play().catch(() => {});
+      });
+
+      video.play().catch((err) => {
+        console.log('Video autoplay prevented:', err);
+      });
+
+      setTimeout(() => {
+        setVideoLoaded(true);
+      }, 1000);
+
+      // Subtle parallax effect on scroll
+      const handleScroll = () => {
+        if (containerRef.current && video) {
+          const scrolled = window.scrollY;
+          const rate = scrolled * 0.3;
+          video.style.transform = `translateY(${rate}px)`;
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+        video.removeEventListener('loadeddata', handleVideoReady);
+        video.removeEventListener('canplay', handleVideoReady);
+        video.removeEventListener('canplaythrough', handleVideoReady);
+        video.removeEventListener('loadedmetadata', handleVideoReady);
+        window.removeEventListener('scroll', handleScroll);
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+        }
+      };
     }
 
     return () => {
@@ -90,61 +147,61 @@ export default function KontaktPage() {
     }
   };
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: 'Telefon',
-      content: '+48 123 456 789',
-      link: 'tel:+48123456789',
-      gradient: 'from-blue-500 to-blue-600',
-    },
-    {
-      icon: Mail,
-      title: 'E-mail',
-      content: 'kontakt@moviq.pl',
-      link: 'mailto:kontakt@moviq.pl',
-      gradient: 'from-purple-500 to-purple-600',
-    },
-    {
-      icon: MapPin,
-      title: 'Adres',
-      content: 'ul. Bydgoska 15, 86-031 Osielsko',
-      link: 'https://maps.google.com/?q=Osielsko+Bydgoska+15',
-      gradient: 'from-orange-500 to-orange-600',
-    },
-    {
-      icon: Clock,
-      title: 'Godziny pracy',
-      content: 'Pon–Pt, 9:00–17:00',
-      link: null,
-      gradient: 'from-[#0BA14C] to-[#0a8a3f]',
-    },
-  ];
 
   return (
-    <div ref={sectionRef}>
+    <div ref={sectionRef} className="bg-[#020617] min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center pt-20 md:pt-24 pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#0BA14C]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <section
+        ref={containerRef}
+        className="relative min-h-[30vh] md:min-h-[35vh] flex items-center pt-20 md:pt-24 pb-8 md:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-gray-800"
+      >
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          {/* Blurred placeholder */}
+          <div
+            className={`absolute inset-0 bg-[#020617] transition-opacity duration-300 ${
+              videoLoaded ? 'opacity-0' : 'opacity-100'
+            }`}
+            style={{
+              filter: 'blur(20px)',
+            }}
+          />
+
+          {/* Video */}
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+              videoLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              objectPosition: 'center center',
+            }}
+          >
+            <source src="/videos/contactus.mp4" type="video/mp4" />
+          </video>
+
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/70"></div>
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70"></div>
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full text-center text-white">
           <div
-            className={`space-y-6 transition-all duration-1000 ease-out ${
+            className={`space-y-3 md:space-y-4 transition-all duration-1000 ease-out ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#0BA14C] to-[#0a8a3f] shadow-xl flex items-center justify-center">
-                <MessageSquare className="w-10 h-10 text-white" strokeWidth={2.5} />
-              </div>
-            </div>
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white"
               style={{
                 textShadow: '0 6px 40px rgba(0, 0, 0, 1), 0 3px 15px rgba(0, 0, 0, 0.9)',
               }}
@@ -152,7 +209,7 @@ export default function KontaktPage() {
               Skontaktuj się z nami
             </h1>
             <p
-              className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto"
+              className="text-sm md:text-base leading-relaxed max-w-2xl mx-auto text-gray-300"
               style={{
                 textShadow: '0 4px 25px rgba(0, 0, 0, 1), 0 2px 10px rgba(0, 0, 0, 0.9)',
               }}
@@ -163,81 +220,8 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 md:mb-16 transition-all duration-1000 ease-out ${
-              isVisible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-8'
-            }`}
-          >
-            Dane kontaktowe
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {contactInfo.map((info, index) => {
-              const IconComponent = info.icon;
-              const content = info.link ? (
-                <a
-                  href={info.link}
-                  target={info.link.startsWith('http') ? '_blank' : undefined}
-                  rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="hover:text-[#0BA14C] transition-colors duration-300"
-                >
-                  {info.content}
-                </a>
-              ) : (
-                <span>{info.content}</span>
-              );
-
-              return (
-                <div
-                  key={index}
-                  className={`group relative bg-white rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-gray-200 hover:border-[#0BA14C]/30 hover:-translate-y-3 overflow-hidden ${
-                    isVisible
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-8'
-                  }`}
-                  style={{
-                    transitionDelay: `${400 + index * 100}ms`,
-                    boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08), 0 4px 15px rgba(0, 0, 0, 0.05)',
-                  }}
-                >
-                  {/* Decorative gradient background */}
-                  <div
-                    className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${info.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-500 rounded-full blur-3xl`}
-                  ></div>
-
-                  {/* Top accent glow */}
-                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0BA14C] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-3xl"></div>
-
-                  <div className="relative z-10">
-                    <div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${info.gradient} shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex items-center justify-center mb-6`}
-                    >
-                      <IconComponent className="w-7 h-7 text-white" strokeWidth={2.5} />
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3 text-gray-900 group-hover:text-[#0BA14C] transition-colors duration-300">
-                      {info.title}
-                    </h3>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
-                      {content}
-                    </p>
-                  </div>
-
-                  {/* Bottom accent line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0BA14C] to-[#0BA14C] opacity-100 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl"></div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Form Section */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#F7F7F7] border-t-2 border-gray-200">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#020617]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left Column - Info */}
@@ -251,34 +235,98 @@ export default function KontaktPage() {
                 transitionDelay: '200ms',
               }}
             >
-              <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border-2 border-gray-200 h-full">
+              <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 h-full">
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0BA14C] to-[#0a8a3f] flex items-center justify-center">
-                    <MessageSquare className="w-7 h-7 text-white" strokeWidth={2.5} />
+                  <div className="w-14 h-14 rounded-2xl bg-[#34D399]/10 border-2 border-[#34D399]/20 flex items-center justify-center">
+                    <MessageSquare className="w-7 h-7 text-[#34D399]" strokeWidth={2.5} />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  <h2 className="text-2xl md:text-3xl font-bold text-white">
                     Napisz do nas
                   </h2>
                 </div>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-8">
                   Wypełnij formularz, a my skontaktujemy się z Tobą w ciągu 24 godzin. Odpowiemy na wszystkie Twoje pytania dotyczące współpracy jako kierowca.
                 </p>
-                <div className="space-y-4">
+                
+                {/* Contact Information */}
+                <div className="space-y-5 mb-8 pt-6 border-t border-gray-800">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#0BA14C] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                    <p className="text-gray-700 leading-relaxed">
+                    <div className="w-10 h-10 rounded-xl bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-400 mb-1">Telefon</p>
+                      <a
+                        href="tel:+48123456789"
+                        className="text-sm md:text-base text-white hover:text-[#34D399] transition-colors duration-300"
+                      >
+                        +48 123 456 789
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-400 mb-1">E-mail</p>
+                      <a
+                        href="mailto:kontakt@moviq.pl"
+                        className="text-sm md:text-base text-white hover:text-[#34D399] transition-colors duration-300"
+                      >
+                        kontakt@moviq.pl
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-400 mb-1">Adres</p>
+                      <a
+                        href="https://maps.google.com/?q=Centralna+2T+Osielsko"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm md:text-base text-white hover:text-[#34D399] transition-colors duration-300"
+                      >
+                        Centralna 2T 86-031 Osielsko
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-400 mb-1">Godziny pracy</p>
+                      <p className="text-sm md:text-base text-white">
+                        Pon–Pt, 9:00–17:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Benefits */}
+                <div className="space-y-4 pt-6 border-t border-gray-800">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                       Odpowiadamy na wszystkie zapytania
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#0BA14C] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                    <p className="text-gray-700 leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                       Pomagamy w całym procesie rejestracji
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#0BA14C] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                    <p className="text-gray-700 leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-[#34D399] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                       Jasne odpowiedzi na wszystkie pytania
                     </p>
                   </div>
@@ -297,12 +345,12 @@ export default function KontaktPage() {
                 transitionDelay: '400ms',
               }}
             >
-              <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border-2 border-gray-200">
+              <div className="bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20">
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
+                      className="block text-xs font-semibold text-gray-300 mb-2"
                     >
                       Imię i nazwisko *
                     </label>
@@ -313,7 +361,7 @@ export default function KontaktPage() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0BA14C] focus:border-[#0BA14C] outline-none transition-all text-gray-900"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
                       placeholder="Jan Kowalski"
                     />
                   </div>
@@ -322,7 +370,7 @@ export default function KontaktPage() {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-semibold text-gray-900 mb-2"
+                        className="block text-xs font-semibold text-gray-300 mb-2"
                       >
                         E-mail *
                       </label>
@@ -333,7 +381,7 @@ export default function KontaktPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0BA14C] focus:border-[#0BA14C] outline-none transition-all text-gray-900"
+                        className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
                         placeholder="jan.kowalski@example.com"
                       />
                     </div>
@@ -341,7 +389,7 @@ export default function KontaktPage() {
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-semibold text-gray-900 mb-2"
+                        className="block text-xs font-semibold text-gray-300 mb-2"
                       >
                         Telefon (opcjonalnie)
                       </label>
@@ -351,7 +399,7 @@ export default function KontaktPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0BA14C] focus:border-[#0BA14C] outline-none transition-all text-gray-900"
+                        className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
                         placeholder="+48 123 456 789"
                       />
                     </div>
@@ -360,7 +408,7 @@ export default function KontaktPage() {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
+                      className="block text-xs font-semibold text-gray-300 mb-2"
                     >
                       Temat *
                     </label>
@@ -370,7 +418,7 @@ export default function KontaktPage() {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0BA14C] focus:border-[#0BA14C] outline-none transition-all text-gray-900"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all text-white"
                     >
                       <option value="">Wybierz temat</option>
                       <option value="rejestracja">Rejestracja jako kierowca</option>
@@ -383,7 +431,7 @@ export default function KontaktPage() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
+                      className="block text-xs font-semibold text-gray-300 mb-2"
                     >
                       Wiadomość *
                     </label>
@@ -394,12 +442,12 @@ export default function KontaktPage() {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0BA14C] focus:border-[#0BA14C] outline-none transition-all resize-none text-gray-900"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-xl focus:ring-2 focus:ring-[#34D399] focus:border-[#34D399] outline-none transition-all resize-none text-white"
                       placeholder="Napisz swoją wiadomość..."
                     />
                   </div>
 
-                  <div className="flex items-start bg-[#0BA14C]/5 rounded-xl p-4 border-2 border-[#0BA14C]/20">
+                  <div className="flex items-start bg-[#34D399]/5 rounded-xl p-3 border border-[#34D399]/20">
                     <input
                       type="checkbox"
                       id="rodo"
@@ -407,9 +455,9 @@ export default function KontaktPage() {
                       required
                       checked={formData.rodo}
                       onChange={handleChange}
-                      className="mt-1 mr-3 w-5 h-5 text-[#0BA14C] border-2 border-gray-300 rounded focus:ring-[#0BA14C] focus:ring-2"
+                      className="mt-1 mr-3 w-4 h-4 text-[#34D399] border-gray-600 rounded focus:ring-[#34D399] focus:ring-2 bg-gray-800"
                     />
-                    <label htmlFor="rodo" className="text-sm text-gray-700 leading-relaxed">
+                    <label htmlFor="rodo" className="text-xs text-gray-300 leading-relaxed">
                       Wyrażam zgodę na kontakt telefoniczny i mailowy w sprawie
                       mojego zapytania. *
                     </label>
@@ -418,10 +466,10 @@ export default function KontaktPage() {
                   {/* Submit Message */}
                   {submitMessage && (
                     <div
-                      className={`p-4 rounded-xl ${
+                      className={`p-3 rounded-xl text-sm ${
                         submitMessage.type === 'success'
-                          ? 'bg-green-100 text-green-800 border border-green-300'
-                          : 'bg-red-100 text-red-800 border border-red-300'
+                          ? 'bg-green-900/30 text-green-300 border border-green-700'
+                          : 'bg-red-900/30 text-red-300 border border-red-700'
                       }`}
                     >
                       <p className="font-medium">{submitMessage.text}</p>
@@ -431,11 +479,11 @@ export default function KontaktPage() {
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className={`w-full bg-[#0BA14C] text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#0a8a3f] hover:shadow-2xl hover:shadow-[#0BA14C]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
+                      className={`w-full bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-100 flex items-center justify-center gap-2 ${
                         isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                       }`}
                       style={{
-                        boxShadow: '0 4px 20px rgba(11, 161, 76, 0.3)',
+                        boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
                       }}
                       disabled={isSubmitting}
                     >

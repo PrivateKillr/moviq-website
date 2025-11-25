@@ -69,34 +69,9 @@ export default function Benefits() {
   return (
     <section 
       ref={sectionRef}
-      className="pt-8 md:pt-12 pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 bg-[#F7F7F7] border-t-2 border-gray-200"
+      className="pt-8 md:pt-12 pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 bg-[#020617] border-t border-gray-800"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Heading with fade-in */}
-        <h2 
-          className={`text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 transition-all duration-1000 ease-out ${
-            isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-8'
-          }`}
-        >
-          U nas wszystko jest przejrzyste i fair — a Twoja praca jest naprawdę doceniana.
-        </h2>
-
-        {/* Intro text with fade-in */}
-        <p 
-          className={`text-lg md:text-xl text-gray-700 text-center max-w-3xl mx-auto mb-12 md:mb-16 transition-all duration-1000 ease-out ${
-            isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-4'
-          }`}
-          style={{
-            transitionDelay: '200ms',
-          }}
-        >
-          Staramy się dla Ciebie – bez ukrytych opłat, bez gwiazdek w umowie, bez niejasnych zasad. Wszystko jest przejrzyste i uczciwe.
-        </p>
-
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
           {benefits.map((benefit, index) => {
@@ -104,40 +79,40 @@ export default function Benefits() {
             return (
               <div
                 key={index}
-                className={`group relative bg-white rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-gray-200 hover:border-accent/50 hover:-translate-y-3 overflow-hidden ${
+                className={`group relative bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-[#34D399]/20 hover:border-[#34D399]/40 hover:-translate-y-3 overflow-hidden ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
                 }`}
                 style={{
-                  transitionDelay: `${400 + index * 80}ms`,
-                  boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08), 0 4px 15px rgba(0, 0, 0, 0.05)',
+                  transitionDelay: `${200 + index * 80}ms`,
+                  boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3), 0 4px 15px rgba(0, 0, 0, 0.2)',
                 }}
               >
-                {/* Decorative gradient background */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-accent/5 via-transparent to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Decorative gradient background on hover */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#34D399]/5 via-transparent to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <div className="relative z-10 flex items-start gap-6">
-                  {/* Icon with stronger visual */}
+                  {/* Icon with green check - positioned top left */}
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:from-accent/20 group-hover:to-accent/10 transition-all duration-300 border-2 border-accent/10 group-hover:border-accent/30 shadow-md group-hover:shadow-lg">
-                      <IconComponent className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
+                    <div className="w-16 h-16 rounded-2xl bg-[#34D399]/10 flex items-center justify-center group-hover:bg-[#34D399]/20 transition-all duration-300 border-2 border-[#34D399]/20 group-hover:border-[#34D399]/40 shadow-md group-hover:shadow-lg group-hover:scale-110">
+                      <IconComponent className="w-8 h-8 text-[#34D399] group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
                     </div>
                   </div>
 
                   {/* Text */}
                   <div className="flex-1 pt-2">
-                    <p className="text-base md:text-lg text-gray-900 leading-relaxed font-semibold">
+                    <p className="text-sm md:text-base text-white leading-relaxed font-semibold">
                       {benefit.text}
                     </p>
                   </div>
                 </div>
 
                 {/* Bottom accent line - always visible but stronger on hover */}
-                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accent/30 via-accent to-accent/30 group-hover:from-accent via-accent to-accent transition-all duration-500 rounded-b-3xl"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#34D399]/30 via-[#34D399] to-[#34D399]/30 group-hover:from-[#34D399] via-[#34D399] to-[#34D399] transition-all duration-500 rounded-b-3xl"></div>
                 
                 {/* Top accent glow on hover */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-3xl"></div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#34D399]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-3xl"></div>
               </div>
             );
           })}
@@ -151,18 +126,23 @@ export default function Benefits() {
               : 'opacity-0 translate-y-4'
           }`}
           style={{
-            transitionDelay: '1000ms',
+            transitionDelay: `${400 + benefits.length * 80}ms`,
           }}
         >
-          <Link
-            href="/rejestracja"
-            className="inline-block bg-accent text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#0a8a3f] hover:shadow-2xl hover:shadow-accent/30 transition-all duration-300 transform hover:scale-105 active:scale-100"
+          <button
+            onClick={() => {
+              const element = document.getElementById('aplikuj');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+            className="inline-block bg-[#34D399] text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-[#10b981] hover:shadow-2xl hover:shadow-[#34D399]/30 transition-all duration-300 transform hover:scale-105 active:scale-100"
             style={{
-              boxShadow: '0 4px 20px rgba(11, 161, 76, 0.3)',
+              boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
             }}
           >
             Chcę dołączyć jako kierowca
-          </Link>
+          </button>
         </div>
       </div>
     </section>

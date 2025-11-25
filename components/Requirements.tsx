@@ -77,11 +77,10 @@ export default function Requirements() {
     };
   }, []);
 
-  // Handle video loading
   useEffect(() => {
     if (isVisible && videoRef.current) {
       const video = videoRef.current;
-      video.playbackRate = 0.7; // Slow down video
+      video.playbackRate = 0.7;
 
       const handleVideoReady = () => {
         setVideoLoaded(true);
@@ -90,7 +89,6 @@ export default function Requirements() {
         });
       };
 
-      // Show video immediately
       setVideoLoaded(true);
 
       video.addEventListener('loadeddata', handleVideoReady);
@@ -105,7 +103,6 @@ export default function Requirements() {
         console.log('Video autoplay prevented:', err);
       });
 
-      // Fallback: show video after 1 second
       setTimeout(() => {
         setVideoLoaded(true);
       }, 1000);
@@ -123,13 +120,12 @@ export default function Requirements() {
     <section
       ref={sectionRef}
       id="wymagania"
-      className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#020617]"
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        {/* Blurred placeholder */}
         <div
-          className={`absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-[#020617] transition-opacity duration-500 ${
             videoLoaded ? 'opacity-0' : 'opacity-100'
           }`}
           style={{
@@ -137,7 +133,6 @@ export default function Requirements() {
           }}
         />
 
-        {/* Video */}
         <video
           ref={videoRef}
           autoPlay
@@ -148,46 +143,34 @@ export default function Requirements() {
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
             videoLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{
-            objectPosition: 'center center',
-          }}
         >
           <source src="/videos/Umowa.mp4" type="video/mp4" />
         </video>
 
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
-
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60"></div>
+        <div className="absolute inset-0 bg-[#020617]/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/70 via-[#020617]/80 to-[#020617]/90"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Heading with fade-in */}
         <h2 
-          className={`text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-white transition-all duration-1000 ease-out ${
+          className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 text-white transition-all duration-1000 ease-out ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-8'
           }`}
-          style={{
-            textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)',
-          }}
         >
           Jakie są wymagania?
         </h2>
 
-        {/* Intro text with fade-in */}
         <p 
-          className={`text-base md:text-lg text-white/90 text-center max-w-3xl mx-auto mb-12 md:mb-16 transition-all duration-1000 ease-out ${
+          className={`text-sm md:text-base text-gray-400 text-center max-w-3xl mx-auto mb-12 md:mb-16 transition-all duration-1000 ease-out ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4'
           }`}
           style={{
             transitionDelay: '200ms',
-            textShadow: '0 2px 15px rgba(0, 0, 0, 0.7), 0 1px 5px rgba(0, 0, 0, 0.5)',
           }}
         >
           Nie musisz mieć wszystkiego od razu – pomagamy zorganizować dokumenty i badania. Jeśli nie wiesz, od czego zacząć, po prostu zgłoś się.
@@ -196,21 +179,21 @@ export default function Requirements() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
           {/* Basic Requirements */}
           <div 
-            className={`bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-white/50 transition-all duration-1000 ease-out ${
+            className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 transition-all duration-1000 ease-out ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-8'
             }`}
             style={{
               transitionDelay: '400ms',
-              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2)',
+              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3)',
             }}
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center border-2 border-accent/10">
-                <Car className="w-7 h-7 text-accent" strokeWidth={2.5} />
+              <div className="w-14 h-14 rounded-2xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20">
+                <Car className="w-7 h-7 text-[#34D399]" strokeWidth={2.5} />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              <h3 className="text-xl md:text-2xl font-bold text-white">
                 Podstawowe wymagania
               </h3>
             </div>
@@ -229,10 +212,10 @@ export default function Requirements() {
                       transitionDelay: `${600 + index * 100}ms`,
                     }}
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center mt-0.5">
-                      <IconComponent className="w-5 h-5 text-black" strokeWidth={2.5} />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#34D399]/10 flex items-center justify-center mt-0.5 border border-[#34D399]/20">
+                      <IconComponent className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
                     </div>
-                    <span className="text-base md:text-lg text-gray-900 leading-relaxed font-medium pt-1">
+                    <span className="text-sm md:text-base text-gray-300 leading-relaxed font-medium pt-1">
                       {req.text}
                     </span>
                   </li>
@@ -243,21 +226,21 @@ export default function Requirements() {
 
           {/* Documents */}
           <div 
-            className={`bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-white/50 transition-all duration-1000 ease-out ${
+            className={`bg-[#0D1020] rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[#34D399]/20 transition-all duration-1000 ease-out ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-8'
             }`}
             style={{
               transitionDelay: '500ms',
-              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2)',
+              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3)',
             }}
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center border-2 border-accent/10">
-                <FileCheck className="w-7 h-7 text-accent" strokeWidth={2.5} />
+              <div className="w-14 h-14 rounded-2xl bg-[#34D399]/10 flex items-center justify-center border-2 border-[#34D399]/20">
+                <FileCheck className="w-7 h-7 text-[#34D399]" strokeWidth={2.5} />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              <h3 className="text-xl md:text-2xl font-bold text-white">
                 Dokumenty i badania, które pomagamy zorganizować
               </h3>
             </div>
@@ -276,10 +259,10 @@ export default function Requirements() {
                       transitionDelay: `${700 + index * 100}ms`,
                     }}
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center mt-0.5">
-                      <IconComponent className="w-5 h-5 text-black" strokeWidth={2.5} />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#34D399]/10 flex items-center justify-center mt-0.5 border border-[#34D399]/20">
+                      <IconComponent className="w-5 h-5 text-[#34D399]" strokeWidth={2.5} />
                     </div>
-                    <span className="text-base md:text-lg text-gray-900 leading-relaxed font-medium pt-1">
+                    <span className="text-sm md:text-base text-gray-300 leading-relaxed font-medium pt-1">
                       {doc.text}
                     </span>
                   </li>
@@ -289,16 +272,14 @@ export default function Requirements() {
           </div>
         </div>
 
-        {/* Footer note */}
         <p 
-          className={`text-center text-base md:text-lg text-white/80 max-w-3xl mx-auto transition-all duration-1000 ease-out ${
+          className={`text-center text-sm md:text-base text-gray-400 max-w-3xl mx-auto transition-all duration-1000 ease-out ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4'
           }`}
           style={{
             transitionDelay: '1200ms',
-            textShadow: '0 2px 10px rgba(0, 0, 0, 0.6)',
           }}
         >
           Jeśli nie wiesz, od czego zacząć – po prostu zgłoś się. Powiemy Ci

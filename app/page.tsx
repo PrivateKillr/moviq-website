@@ -1,21 +1,23 @@
 import type { Metadata } from 'next';
 import Hero from '@/components/Hero';
-import HowItWorks from '@/components/HowItWorks';
-import Benefits from '@/components/Benefits';
-import Requirements from '@/components/Requirements';
+import PracaOdZarazSection from '@/components/PracaOdZarazSection';
+import AplikujSection from '@/components/AplikujSection';
+import WyplatySection from '@/components/WyplatySection';
+import FAQSection from '@/components/FAQSection';
 
 export const metadata: Metadata = {
-  title: 'moviQ – Partner flotowy dla kierowców Uber, Bolt, FreeNow i delivery',
-  description: 'Zacznij zarabiać jako kierowca aplikacji w kilka dni. Zgłaszasz się do nas, a my załatwiamy za Ciebie formalności, umowy i rozliczenia. Wypłaty co tydzień.',
+  title: 'moviQ – Praca jako kierowca Uber, Bolt, FreeNow | Auto dla kierowców | Wypłaty co tydzień',
+  description: 'Zacznij zarabiać jako kierowca Uber, Bolt i FreeNow nawet w 3 dni. Organizujemy auto, licencję taxi, badania lekarskie i aktywację w aplikacjach. Wypłaty co tydzień – zawsze na czas.',
 };
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <HowItWorks />
-      <Benefits />
-      <Requirements />
+      <PracaOdZarazSection />
+      <AplikujSection />
+      <WyplatySection />
+      <FAQSection />
     </>
   );
 }
