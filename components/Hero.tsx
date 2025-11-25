@@ -31,15 +31,17 @@ export default function Hero() {
       // Show video immediately - don't wait for full load
       setVideoLoaded(true);
       
+      // Handle metadata loaded
+      const handleMetadataLoaded = () => {
+        setVideoLoaded(true);
+        video.play().catch(() => {});
+      };
+      
       // Try multiple events to ensure video loads
       video.addEventListener('loadeddata', handleVideoReady);
       video.addEventListener('canplay', handleVideoReady);
       video.addEventListener('canplaythrough', handleVideoReady);
-      // Show video immediately after metadata loads
-      video.addEventListener('loadedmetadata', () => {
-        setVideoLoaded(true);
-        video.play().catch(() => {});
-      });
+      video.addEventListener('loadedmetadata', handleMetadataLoaded);
 
       // Ensure video plays on load
       video.play().catch((err) => {
@@ -47,7 +49,7 @@ export default function Hero() {
       });
       
       // Fallback: show video after 1 second even if not loaded
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         setVideoLoaded(true);
       }, 1000);
 
@@ -63,8 +65,11 @@ export default function Hero() {
       window.addEventListener('scroll', handleScroll, { passive: true });
 
       return () => {
+        clearTimeout(timeoutId);
         video.removeEventListener('loadeddata', handleVideoReady);
         video.removeEventListener('canplay', handleVideoReady);
+        video.removeEventListener('canplaythrough', handleVideoReady);
+        video.removeEventListener('loadedmetadata', handleMetadataLoaded);
         window.removeEventListener('scroll', handleScroll);
       };
     }

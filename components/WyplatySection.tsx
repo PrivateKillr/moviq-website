@@ -78,6 +78,7 @@ export default function WyplatySection() {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+      observer.disconnect();
     };
   }, []);
 

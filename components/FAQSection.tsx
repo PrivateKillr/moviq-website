@@ -61,6 +61,7 @@ export default function FAQSection() {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+      observer.disconnect();
     };
   }, []);
 

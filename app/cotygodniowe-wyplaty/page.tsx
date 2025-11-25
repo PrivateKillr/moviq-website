@@ -90,6 +90,7 @@ export default function CotygodnioweWyplatyPage() {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+      observer.disconnect();
     };
   }, []);
 
@@ -106,29 +107,32 @@ export default function CotygodnioweWyplatyPage() {
         });
       };
 
+      const handleMetadataLoaded = () => {
+        setHeroVideoLoaded(true);
+        video.play().catch(() => {});
+      };
+
       setHeroVideoLoaded(true);
 
       video.addEventListener('loadeddata', handleVideoReady);
       video.addEventListener('canplay', handleVideoReady);
       video.addEventListener('canplaythrough', handleVideoReady);
-      video.addEventListener('loadedmetadata', () => {
-        setHeroVideoLoaded(true);
-        video.play().catch(() => {});
-      });
+      video.addEventListener('loadedmetadata', handleMetadataLoaded);
 
       video.play().catch((err) => {
         console.log('Video autoplay prevented:', err);
       });
 
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         setHeroVideoLoaded(true);
       }, 1000);
 
       return () => {
+        clearTimeout(timeoutId);
         video.removeEventListener('loadeddata', handleVideoReady);
         video.removeEventListener('canplay', handleVideoReady);
         video.removeEventListener('canplaythrough', handleVideoReady);
-        video.removeEventListener('loadedmetadata', handleVideoReady);
+        video.removeEventListener('loadedmetadata', handleMetadataLoaded);
       };
     }
   }, [isVisible]);
@@ -146,29 +150,32 @@ export default function CotygodnioweWyplatyPage() {
         });
       };
 
+      const handleMetadataLoaded = () => {
+        setCtaVideoLoaded(true);
+        video.play().catch(() => {});
+      };
+
       setCtaVideoLoaded(true);
 
       video.addEventListener('loadeddata', handleVideoReady);
       video.addEventListener('canplay', handleVideoReady);
       video.addEventListener('canplaythrough', handleVideoReady);
-      video.addEventListener('loadedmetadata', () => {
-        setCtaVideoLoaded(true);
-        video.play().catch(() => {});
-      });
+      video.addEventListener('loadedmetadata', handleMetadataLoaded);
 
       video.play().catch((err) => {
         console.log('Video autoplay prevented:', err);
       });
 
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         setCtaVideoLoaded(true);
       }, 1000);
 
       return () => {
+        clearTimeout(timeoutId);
         video.removeEventListener('loadeddata', handleVideoReady);
         video.removeEventListener('canplay', handleVideoReady);
         video.removeEventListener('canplaythrough', handleVideoReady);
-        video.removeEventListener('loadedmetadata', handleVideoReady);
+        video.removeEventListener('loadedmetadata', handleMetadataLoaded);
       };
     }
   }, [isVisible]);

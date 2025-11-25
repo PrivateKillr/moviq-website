@@ -50,6 +50,8 @@ export default function KontaktPage() {
 
     // Video loading
     const video = videoRef.current;
+    let timeoutId: NodeJS.Timeout | null = null;
+    
     if (video) {
       video.playbackRate = 0.7;
 
@@ -60,21 +62,23 @@ export default function KontaktPage() {
         });
       };
 
+      const handleMetadataLoaded = () => {
+        setVideoLoaded(true);
+        video.play().catch(() => {});
+      };
+
       setVideoLoaded(true);
 
       video.addEventListener('loadeddata', handleVideoReady);
       video.addEventListener('canplay', handleVideoReady);
       video.addEventListener('canplaythrough', handleVideoReady);
-      video.addEventListener('loadedmetadata', () => {
-        setVideoLoaded(true);
-        video.play().catch(() => {});
-      });
+      video.addEventListener('loadedmetadata', handleMetadataLoaded);
 
       video.play().catch((err) => {
         console.log('Video autoplay prevented:', err);
       });
 
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setVideoLoaded(true);
       }, 1000);
 
@@ -90,14 +94,18 @@ export default function KontaktPage() {
       window.addEventListener('scroll', handleScroll, { passive: true });
 
       return () => {
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
         video.removeEventListener('loadeddata', handleVideoReady);
         video.removeEventListener('canplay', handleVideoReady);
         video.removeEventListener('canplaythrough', handleVideoReady);
-        video.removeEventListener('loadedmetadata', handleVideoReady);
+        video.removeEventListener('loadedmetadata', handleMetadataLoaded);
         window.removeEventListener('scroll', handleScroll);
         if (sectionRef.current) {
           observer.unobserve(sectionRef.current);
         }
+        observer.disconnect();
       };
     }
 
@@ -105,6 +113,7 @@ export default function KontaktPage() {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+      observer.disconnect();
     };
   }, []);
 

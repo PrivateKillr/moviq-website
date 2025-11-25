@@ -195,6 +195,7 @@ export default function PracaOdZarazSection() {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+      observer.disconnect();
       if (rafId) {
         cancelAnimationFrame(rafId);
       }

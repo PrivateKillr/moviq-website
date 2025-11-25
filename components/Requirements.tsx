@@ -74,6 +74,7 @@ export default function Requirements() {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+      observer.disconnect();
     };
   }, []);
 
@@ -89,29 +90,32 @@ export default function Requirements() {
         });
       };
 
+      const handleMetadataLoaded = () => {
+        setVideoLoaded(true);
+        video.play().catch(() => {});
+      };
+
       setVideoLoaded(true);
 
       video.addEventListener('loadeddata', handleVideoReady);
       video.addEventListener('canplay', handleVideoReady);
       video.addEventListener('canplaythrough', handleVideoReady);
-      video.addEventListener('loadedmetadata', () => {
-        setVideoLoaded(true);
-        video.play().catch(() => {});
-      });
+      video.addEventListener('loadedmetadata', handleMetadataLoaded);
 
       video.play().catch((err) => {
         console.log('Video autoplay prevented:', err);
       });
 
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         setVideoLoaded(true);
       }, 1000);
 
       return () => {
+        clearTimeout(timeoutId);
         video.removeEventListener('loadeddata', handleVideoReady);
         video.removeEventListener('canplay', handleVideoReady);
         video.removeEventListener('canplaythrough', handleVideoReady);
-        video.removeEventListener('loadedmetadata', handleVideoReady);
+        video.removeEventListener('loadedmetadata', handleMetadataLoaded);
       };
     }
   }, [isVisible]);

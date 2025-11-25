@@ -43,6 +43,7 @@ export default function AplikujSection() {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+      observer.disconnect();
     };
   }, []);
 
